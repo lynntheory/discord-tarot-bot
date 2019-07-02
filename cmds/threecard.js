@@ -1,5 +1,5 @@
 //import deck
-const tarot = require('../carddeck/riderwaite.json');
+const tarot = require('../carddecks/riderwaite.json');
 
 //import Config
 const config = require('../config/config.json');
