@@ -10,7 +10,7 @@ const cmds = require('./cmds/index.js');
 
 //cup of coffee
 setInterval(function() {
-    http.get(`https://lynntheory-discord-tarot-bot.glitch.me/`);
+    http.get(`http://lynntheory-discord-tarot-bot.glitch.me/`);
 }, 280000);
 
 client.on('ready', () => {
