@@ -2,6 +2,7 @@
   "Prefix": "*",
 
   "presence": [
-    "for messages"
+    "for messages",
+    "this is a test"
   ]
 }

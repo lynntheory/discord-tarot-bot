@@ -1,14 +1,15 @@
 //import deck
-const deck = require('../carddeck/riderwaite.json');
+const tarot = require('../carddeck/riderwaite.json');
 
 //import Config
 const config = require('../config/config.json');
 
 async function onecard (message) {
   try{
-    const cardMax = deck.cards.length();
-    var random = Math.floor(Math.random() * (cardMax.length - 1));
-    var card = deck.cards[random];
+    var deck = tarot.cards;
+    var cardMax = deck.length;
+    var random = Math.floor(Math.random() * (cardMax - 1));
+    var card = deck[random];
     message.channel.send(`Your card is ${card}.`);
   } catch (err) {
     console.log(err);

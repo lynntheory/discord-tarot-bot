@@ -10,7 +10,7 @@ const commands = {
   'threecard': threeCard
 }
 
-async function check(message) {
+module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
     return commands[args[0]](message);

@@ -1,16 +1,17 @@
 //import deck
-const deck = require('../carddeck/riderwaite.json');
+const tarot = require('../carddeck/riderwaite.json');
 
 //import Config
 const config = require('../config/config.json');
 
 async function threecard (message) {
   try{
-    const cardMax = deck.cards.length();
+    var deck = tarot.cards;
+    var cardMax = deck.length;
     var cards = [];
-    while (cards.length < 3) {
-      var random = Math.floor(Math.random() * (cardMax.length - 1));
-      var pull = deck.cards[random];
+    while (cards.length <= 3) {
+      var random = Math.floor(Math.random() * (cardMax - 1));
+      var pull = deck[random];
       if (cards.indexOf(pull) == -1) {
         cards.push(pull);
       }
