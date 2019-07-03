@@ -10,14 +10,14 @@ const commands = {
   'about': about,
   'onecard': oneCard,
   'threecard': threeCard
-}
+};
 
 module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
-    return commands[args[0]](args);
+    return commands[args[0]](args, message);
   } else {
     message.reply('This command does not exist!');
     return;
   }
-}
+} 

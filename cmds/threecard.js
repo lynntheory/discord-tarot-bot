@@ -2,16 +2,19 @@
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
 const library = require('../functions/deckCheck.js');
+const tarot = require('../carddecks/riderwaite.json');
 
-const spread = [the past, the present, the future];
+const spread = ['past', 'present', 'future'];
 
-async function threecard (args) {
+async function threecard (args, message) {
   try{
-    if (args.length > 1){
-      let deck = library.deckCheck(args[1])
+    var deck = tarot.cards;
+    /*if (args.length > 1){
+      var deckName = args[1];
+      deck = library.deckCheck(deckName);
     } else {
-      let deck = library.deckCheck(config.defaultDeck);
-    }
+      deck = library.deckCheck(config.defaultDeck);
+    }*/
     var cardMax = deck.length;
     var cards = [];
     while (cards.length <= 3) {
@@ -22,7 +25,7 @@ async function threecard (args) {
       }
     }
     for (var i = 0; i <= 2; i++) {
-      message.channel.send(`Your card for ${spread[i]} is ${cards[i]}.`);
+      message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);
       message.channel.send(meaning);
     }
