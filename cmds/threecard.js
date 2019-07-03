@@ -1,8 +1,9 @@
-//import deck
+//imports
 const tarot = require('../carddecks/riderwaite.json');
-
-//import Config
 const config = require('../config/config.json');
+const book = require('../functions/checkBook.js');
+
+const spread = [the past, the present, the future];
 
 async function threecard (message) {
   try{
@@ -16,9 +17,11 @@ async function threecard (message) {
         cards.push(pull);
       }
     }
-    message.channel.send(`Your card for the past is ${cards[0]}.`);
-    message.channel.send(`Your card for the present is ${cards[1]}.`);
-    message.channel.send(`Your card for the future is ${cards[2]}.`);
+    for (var i = 0; i <= 2; i++) {
+      message.channel.send(`Your card for ${spread[i]} is ${cards[i]}.`);
+      var meaning = book.checkBook(cards[i]);
+      message.channel.send(meaning);
+    }
   } catch (err) {
     console.log(err);
   }
