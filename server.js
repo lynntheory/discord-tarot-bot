@@ -6,7 +6,7 @@ const Express = require('express');
 const app = Express();
 
 const config = require('./config/config.json');
-const cmds = require('./cmds/index.js');
+const cmds = require('./functions/index.js');
 
 //cup of coffee
 setInterval(function() {
