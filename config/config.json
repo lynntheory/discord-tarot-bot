@@ -1,6 +1,6 @@
 {
   "Prefix": "*",
-  "deck": "riderwaite",
+  "defaultDeck": "riderwaite",
   "presence": [
     "for messages",
     "this is a test"

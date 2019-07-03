@@ -1,13 +1,17 @@
 //imports
-const tarot = require('../carddecks/riderwaite.json');
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const library = require('../functions/deckCheck.js');
 
 const spread = [the past, the present, the future];
 
-async function threecard (message) {
+async function threecard (args) {
   try{
-    var deck = tarot.cards;
+    if (args.length > 1){
+      let deck = library.deckCheck(args[1])
+    } else {
+      let deck = library.deckCheck(config.defaultDeck);
+    }
     var cardMax = deck.length;
     var cards = [];
     while (cards.length <= 3) {
