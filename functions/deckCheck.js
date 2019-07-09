@@ -11,12 +11,14 @@ const decks = {
   'Greenwood': greenwood
 };
 
-module.exports.deckCheck = function(deckName) {
-  if (decks[deckName] != undefined) {
-    var chosenDeck = decks[deckName];
-    return chosenDeck;
-  } else {
-    console.log('This deck does not exist!');
-    return;
+module.exports.deckCheck = function(message) {
+  for (var i = 0; i <= decks.length; i++) {
+    if(message.content.match(decks[i])) {
+      var deck = decks[i];
+      return deck;
+    } else {
+      var deck = library.deckCheck(config.defaultDeck);
+      return deck;
+    }
   }
 }
