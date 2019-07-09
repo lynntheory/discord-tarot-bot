@@ -16,9 +16,11 @@ module.exports.deckCheck = function(message) {
     if(message.content.match(decks[i])) {
       var deck = decks[i];
       return deck;
-    } else {
-      var deck = library.deckCheck(config.defaultDeck);
-      return deck;
+    } else for (var i = 0; i <= decks.length; i++){
+      if(config.defaultDeck == decks[i]) {
+        var deck = decks[i];
+        return deck;
+      }
     }
   }
 }
