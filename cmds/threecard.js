@@ -7,7 +7,7 @@ const spread = ['past', 'present', 'future'];
 
 async function threecard (args, message) {
   try{
-    var deck = JSON.parse(JSON.stringify(library.deckCheck(args)));
+    var deck = JSON.parse(JSON.stringify(library.deckCheck(message)));
     if (deck == undefined) {
       message.reply ("Error retrieving deck.");
     }

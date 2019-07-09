@@ -5,7 +5,7 @@ const config = require('../config/config.json');
 const riderwaite = require('../carddecks/riderwaite.json');
 const greenwood = require('../carddecks/greenwood.json');
 
-var decks = {
+const decks = {
   riderwaite,
   greenwood
 };
@@ -13,23 +13,19 @@ var decks = {
 module.exports.deckCheck = function(message) {
   var seeking = message.content.slice(message.content.indexOf(" ") + 1, message.length);
   console.log(seeking);
-  var keys = Object.keys(decks).length;
-  console.log(`${keys} decks loaded.`);
-  for (var i = 0; i < keys; i++) {
-    console.log('Hey Lynn it got here.');
-    var deck = decks[i];
+  var length = decks.keys;
+  for (var key in decks) {
+    console.log('Hey Lynn it got here.')
+    var name = decks[key].deck;
     console.log(name);
     if(seeking === name) {
       console.log('Deck found');
-      let deck = decks[i];
+      let deck = decks[key];
       return deck;
-    } else {
-      var basic = config.defaultDeck;
-      if(basic = decks[i].deck) {
-        console.log('Default deck');
-        let deck = decks[i];
-        return deck;
-      }
-    }
-  }
+    } 
+  } 
+  var basic = config.defaultDeck;
+  console.log('Default deck');
+  let deck = riderwaite;
+  return deck;
 }
