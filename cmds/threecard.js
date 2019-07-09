@@ -7,12 +7,15 @@ const spread = ['past', 'present', 'future'];
 
 async function threecard (args, message) {
   try{
-    var deck = library.deckCheck(message);
+    var deck = JSON.parse(JSON.stringify(library.deckCheck(args)));
+    if (deck == undefined) {
+      message.reply ("Error retrieving deck.");
+    }
     var cardMax = deck.cards.length;
     var cards = [];
     while (cards.length <= 3) {
       var random = Math.floor(Math.random() * (cardMax - 1));
-      var pull = deck[random];
+      var pull = deck.cards[random];
       if (cards.indexOf(pull) == -1) {
         cards.push(pull);
       }
