@@ -5,10 +5,13 @@ const library = require('../functions/deckCheck.js');
 
 async function onecard (args, message) {
   try{
-    var deck = library.deckCheck(message);
+    var deck = JSON.parse(JSON.stringify(library.deckCheck(message)));
+    if (deck == undefined) {
+      message.reply ("Error retrieving deck.");
+    }
     var cardMax = deck.cards.length;
     var random = Math.floor(Math.random() * (cardMax - 1));
-    var card = deck[random];
+    var card = deck.cards[random];
     message.channel.send(`Your card is ${card}.`);
     var meaning = book.checkBook(card, deck);
     message.channel.send(meaning);
