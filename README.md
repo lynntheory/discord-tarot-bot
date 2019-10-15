@@ -16,9 +16,9 @@ In the ``config/config.json`` file, edit command prefix and other variables to m
 ## Operation
 All commands in the ``commands`` folder require use of the prefix stored in the ``config/config.json`` file to trigger.
 
-# Resources
-  
-**Discord** is all-in-one voice and text chat for gamers that's free, secure, and works online, on your desktop, and on your phone. 
+## Resources
+
+**Discord** is all-in-one voice and text chat for gamers that's free, secure, and works online, on your desktop, and on your phone.
 
 **[Discord.js](https://github.com/hydrabolt/discord.js/)**
 

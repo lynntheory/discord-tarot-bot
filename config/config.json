@@ -2,7 +2,8 @@
   "Prefix": "*",
   "defaultDeck": "Rider Waite",
   "presence": [
-    "for messages",
-    "this is a test"
+    "this is a test",
+    "this is a second test",
+    "this is a third test"
   ]
 }

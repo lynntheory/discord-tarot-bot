@@ -22,10 +22,11 @@ module.exports.deckCheck = function(message) {
       console.log('Deck found');
       let deck = decks[key];
       return deck;
-    } 
-  } 
-  var basic = config.defaultDeck;
-  console.log('Default deck');
-  let deck = riderwaite;
-  return deck;
+    } else {
+      var basic = config.defaultDeck;
+      console.log('Default deck');
+      let deck = riderwaite;
+      return deck;
+    }
+  }
 }
