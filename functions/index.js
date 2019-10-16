@@ -6,14 +6,12 @@ const about = require('../cmds/about.js');
 const oneCard = require('../cmds/onecard.js');
 const threeCard = require('../cmds/threecard.js');
 const deckTest = require('../cmds/decktest.js');
-const testCard = require('../cmds/testCard.js');
 
 const commands = {
   'about': about,
   'onecard': oneCard,
   'threecard': threeCard,
-  'deckTest': deckTest,
-  'testCard': testCard
+  'deckTest': deckTest
 };
 
 module.exports.check = function(message) {
