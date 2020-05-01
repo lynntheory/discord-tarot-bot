@@ -6,7 +6,7 @@ const oneCard = require('../cmds/onecard.js');
 const threeCard = require('../cmds/threecard.js');
 const crossSpread = require('../cmds/crossspread.js');
 const guideSpread = require('../cmds/guidespread.js');
-const location = require('../cmds/about.js');
+const about = require('../cmds/about.js');
 const refresh = require('../cmds/refresh.js');
 
 
