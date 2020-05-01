@@ -2,16 +2,22 @@
 const config = require('../config/config.json');
 
 //commands import
-const about = require('../cmds/about.js');
 const oneCard = require('../cmds/onecard.js');
 const threeCard = require('../cmds/threecard.js');
-const deckTest = require('../cmds/decktest.js');
+const crossSpread = require('../cmds/crossspread.js');
+const guideSpread = require('../cmds/guidespread.js');
+const location = require('../cmds/location.js');
+const refresh = require('../cmds/refresh.js');
+
 
 const commands = {
-  'about': about,
-  'onecard': oneCard,
-  'threecard': threeCard,
-  'deckTest': deckTest
+  'one': oneCard,
+  'time': threeCard,
+  'three': threeCard,
+  'cross': crossSpread,
+  'guide': guideSpread,
+  'location': location,
+  'refresh': refresh
 };
 
 module.exports.check = function(message) {
