@@ -53,14 +53,3 @@ client.on('message', async (message) =>{
 });
 
 client.login(process.env.SECRET);
-
-
-client.on('message', async (message) =>{
-  if (message.author.bot) return;
-  if (message.content.startsWith(config.Prefix)) {
-    cmds.check(message);
-    return;
-  }
-});
-
-client.login(process.env.SECRET);
