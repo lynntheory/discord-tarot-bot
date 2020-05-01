@@ -1,6 +1,6 @@
 //imports
 const config = require('../config/config.json');
-const deck = require('../carddecks/astrologian.json');
+const deck = require('../carddecks/riderwaite.json');
 
 async function refresh (args, message) {
   try{
