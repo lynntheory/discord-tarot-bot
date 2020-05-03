@@ -1,6 +1,6 @@
 //imports
 const config = require('../config/config.json');
-const deck = require('../img/riderwaite/riderwaiteimg.json');
+const deck = require('../img/rider-waite/riderwaiteimg.json');
 
 module.exports.getImg = function(card){
   try{
