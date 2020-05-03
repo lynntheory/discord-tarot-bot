@@ -14,11 +14,6 @@ async function threecard (args, message) {
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i]);
       var imgPath = image.getImg(cards[i]);
-      var embed = new Discord.RichEmbed()
-        .setTitle(`Your card for the ${spread[i]} is ${cards[i]}.`)
-        .setDescription(`${meaning}`)
-        .setImage(`${imgPath}`)
-        message.channel.send(`${embed}`);
       message.channel.send({embed: {
         title: `Your card for the ${spread[i]} is ${cards[i]}.`,
         description: `Card Meaning: ${meaning}`,
