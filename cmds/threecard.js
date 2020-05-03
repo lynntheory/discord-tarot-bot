@@ -18,7 +18,8 @@ async function threecard (args, message) {
         title: `Your card for the ${spread[i]} is ${cards[i]}.`,
         description: `Card Meaning: ${meaning}`,
         image: {
-          "url": `${imgPath}`
+          "url": `${imgPath}`,
+          "height": 200
         }
       }})
     }
