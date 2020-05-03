@@ -18,7 +18,7 @@ async function threecard (args, message) {
       message.channel.send({embed: {
         title: `Your card for the ${spread[i]} is ${cards[i]}.`,
         description: `Card Meaning: ${meaning}`,
-        image: `${imgPath}`
+        image: imgPath
       }})
     }
   } catch (err) {
