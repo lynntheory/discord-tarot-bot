@@ -4,7 +4,7 @@ const deck = require('../img/rider-waite/riderwaiteimg.json');
 
 module.exports.getImg = function(card){
   try{
-    var imgPath = JSON.stringify(deck[card]);
+    var imgPath = deck[card];
     return imgPath;
   } catch (err) {
     console.log(err);
