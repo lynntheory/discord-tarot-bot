@@ -4,9 +4,7 @@ const deck = require('../carddecks/riderwaite.json');
 
 module.exports.cardPull = function (hand, pullCount) {
   var currentDeck = deck.cards;
-  for (i = 0; i < deck.cards.length; i++) {
-    currentDeck[i] = deck.cards[i];
-  }
+  currentDeck = JSON.parse(JSON.stringify(deck.cards));
   while (hand.length <= pullCount) {
     var cardMax = currentDeck.length;
     var random = Math.floor(Math.random() * (cardMax - 1));
