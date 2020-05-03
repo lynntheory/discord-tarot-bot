@@ -10,9 +10,15 @@ async function crossspread (args, message) {
     var pullCount = 9;
     var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
-      message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);
-      message.channel.send(meaning);
+      var imgPath = image.getImg(cards[i]);
+      message.channel.send({embed: {
+        title: `Your card for the ${spread[i]} is ${cards[i]}.`,
+        description: `Card Meaning: ${meaning}`,
+        image: {
+          "url": `${imgPath}`
+        }
+      }})
     }
   } catch (err) {
     console.log(err);

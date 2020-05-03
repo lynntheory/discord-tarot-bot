@@ -8,9 +8,15 @@ async function onecard (args, message) {
     var hand = [];
     var pullCount = 1;
     var cards = mechanics.cardPull(hand, pullCount);
-    message.channel.send(`Your card is ${cards[0]}.`);
-    var meaning = book.checkBook(cards[0]);
-    message.channel.send(meaning);
+    var meaning = book.checkBook(cards[i]);
+    var imgPath = image.getImg(cards[i]);
+    message.channel.send({embed: {
+      title: `Your card for the ${spread[i]} is ${cards[i]}.`,
+      description: `Card Meaning: ${meaning}`,
+      image: {
+        "url": `${imgPath}`
+      }
+    }})
   } catch (err) {
     console.log(err);
   }
