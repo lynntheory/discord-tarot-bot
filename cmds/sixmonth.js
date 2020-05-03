@@ -6,9 +6,9 @@ const spread = ['current', 'month 2', 'month 3', 'month 4', 'month 5', 'month 6'
 
 async function sixmonth (args, message) {
   try{
-    var cards = [];
+    var hand = [];
     var pullCount = 6;
-    var cards = mechanics.cardPull(cards, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);

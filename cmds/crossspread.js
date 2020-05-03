@@ -6,9 +6,9 @@ const spread = ["present", "problem", "past", "future", "conscious", "unconsciou
 
 async function crossspread (args, message) {
   try{
-    var cards = [];
+    var hand = [];
     var pullCount = 9;
-    var cards = mechanics.cardPull(cards, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);

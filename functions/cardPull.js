@@ -16,5 +16,5 @@ module.exports.cardPull = function (hand, pullCount) {
     hand.push(pull);
   }
   currentDeck.length = 0;
-  return cards;
+  return hand;
 }

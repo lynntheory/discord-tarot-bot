@@ -8,9 +8,9 @@ const spread = ['past', 'present', 'future'];
 
 async function threecard (args, message) {
   try{
-    var cards = [];
+    var hand = [];
     var pullCount = 2;
-    var cards = mechanics.cardPull(cards, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i]);
       var imgPath = image.getImg(cards[i]);

@@ -6,9 +6,9 @@ const spread = ['preconceived idea', 'the present', 'the unnexpected', 'the near
 
 async function fivecard (args, message) {
   try{
-    var cards = [];
+    var hand = [];
     var pullCount = 4;
-    var cards = mechanics.cardPull(cards, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);

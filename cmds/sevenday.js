@@ -6,9 +6,9 @@ const spread = ['today', 'tomorrow', 'day 3', 'day 4', 'day 5', 'day 6', 'day 7'
 
 async function sevenday (args, message) {
   try{
-    var cards = [];
+    var hand = [];
     var pullCount = 7;
-    var cards = mechanics.cardPull(cards, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       message.channel.send(`Your card for the ${spread[i]} is ${cards[i]}.`);
       var meaning = book.checkBook(cards[i]);
