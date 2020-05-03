@@ -4,9 +4,11 @@ const config = require('../config/config.json');
 //commands import
 const oneCard = require('../cmds/onecard.js');
 const threeCard = require('../cmds/threecard.js');
+const threeLove = require('../cmds/threelove.js');
 const fiveCard = require('../cmds/fivecard.js');
 const fiveLove = require('../cmds/fivelove.js');
 const fiveRelationship = require('../cmds/fiverelationship.js');
+const compatibility = require('../cmds/compatibility/js');
 const crossSpread = require('../cmds/crossspread.js');
 const guideSpread = require('../cmds/guidespread.js');
 const sevenDay = require('../cmds/sevenday.js');
@@ -20,9 +22,11 @@ const commands = {
   'one': oneCard,
   'time': threeCard,
   'three': threeCard,
+  'threeLove': threeLove,
   'five': fiveCard,
   'fiveLove': fiveLove,
   'relationship': fiveRelationship,
+  'compatibility': compatibility,
   'cross': crossSpread,
   'guide': guideSpread,
   'sevenDay': sevenDay,

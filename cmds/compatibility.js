@@ -2,12 +2,12 @@
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
 const mechanics = require('../functions/cardPull.js');
-const spread = ["situation", "challenge", "known", "unknown", "past", "future", "how you see you", "how others see you", "hopes and fears", "outcome"];
+const spread = ['your wants in relationship', 'their wants in relationship', 'your differences', 'your similarities', 'emotional compatibility', 'physical compatibility', 'mental compatibility'];
 
-async function crossspread (args, message) {
+async function compatibility (args, message) {
   try{
     var hand = [];
-    var pullCount = 9;
+    var pullCount = 6;
     var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i]);
@@ -25,4 +25,4 @@ async function crossspread (args, message) {
   }
 }
 
-module.exports = crossspread;
+module.exports = compatibility;
