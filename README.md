@@ -23,3 +23,5 @@ All commands in the ``cmds`` folder require use of the prefix stored in the ``co
 **[Discord.js](https://github.com/hydrabolt/discord.js/)**
 
 **[the official Discord API documentation](https://discordapp.com/developers/docs/intro)**
+
+https://www.sacred-texts.com/tarot/pkt/index.htm
