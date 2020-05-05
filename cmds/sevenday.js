@@ -1,6 +1,7 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['today', 'tomorrow', 'day 3', 'day 4', 'day 5', 'day 6', 'day 7', 'week overall'];
 

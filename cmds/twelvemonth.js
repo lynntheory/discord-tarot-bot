@@ -1,6 +1,7 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['current', 'month 2', 'month 3', 'month 4', 'month 5', 'month 6', 'month 7', 'month 8', 'month 9', 'month 10', 'month 11', 'month 12', 'overall'];
 

@@ -1,4 +1,3 @@
-const Discord = require('discord.js');
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');

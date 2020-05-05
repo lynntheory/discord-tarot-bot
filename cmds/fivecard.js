@@ -1,6 +1,7 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['preconceived idea', 'the present', 'the unnexpected', 'the near future', 'the distant future'];
 

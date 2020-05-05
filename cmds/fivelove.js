@@ -1,6 +1,7 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['you and current issues', 'past relationships/influences', 'issues you need to address', 'the areas you need to develop', 'the likely outcome'];
 

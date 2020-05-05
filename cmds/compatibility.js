@@ -1,6 +1,7 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
+const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['your wants in relationship', 'their wants in relationship', 'your differences', 'your similarities', 'emotional compatibility', 'physical compatibility', 'mental compatibility'];
 
