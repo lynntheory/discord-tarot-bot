@@ -16,7 +16,7 @@ module.exports.getImg = function(card, currentDeck){
       var index = imageFiles[deckName];
       imgPath = index[card];
     } else {
-      imgPath = "https://raw.githubusercontent.com/lynntheory/discord-tarot-bot/swapping/img/default.png";
+      imgPath = "https://raw.githubusercontent.com/lynntheory/discord-tarot-bot/master/img/default.png";
     }
     return imgPath;
   } catch (err) {
