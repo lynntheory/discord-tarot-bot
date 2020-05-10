@@ -1,6 +1,6 @@
 //imports
 const config = require('../config/config.json');
-var default = config.defaultDeck;
+var fallback = config.defaultDeck;
 
 //decks
 const riderwaite = require('../carddecks/riderwaite.json');
@@ -21,7 +21,7 @@ module.exports.deckCheck = function(deck){
     currentDeck = JSON.parse(JSON.stringify(decks[deck]));
     return currentDeck;
   } else {
-    currentDeck = JSON.parse(JSON.stringify(decks[default]));
+    currentDeck = JSON.parse(JSON.stringify(decks[fallback]));
     return currentDeck;
   }
 }
