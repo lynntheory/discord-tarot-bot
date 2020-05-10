@@ -16,7 +16,7 @@ const decks = {
 }
 
 module.exports.deckCheck = function(deck){
-  var currentDeck[];
+  var currentDeck;
   if (decks[deck] != undefined) {
     currentDeck = JSON.parse(JSON.stringify(decks[deck]));
     return currentDeck;
