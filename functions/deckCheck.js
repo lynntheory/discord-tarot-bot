@@ -18,10 +18,10 @@ const decks = {
 module.exports.deckCheck = function(deck){
   var currentDeck;
   if (decks[deck] != undefined) {
-    currentDeck = JSON.parse(JSON.stringify(decks[deck]));
+    currentDeck = decks[deck];
     return currentDeck;
   } else {
-    currentDeck = JSON.parse(JSON.stringify(decks[fallback]));
+    currentDeck = decks[fallback];
     return currentDeck;
   }
 }
