@@ -11,7 +11,7 @@ const imageFiles = {
 module.exports.getImg = function(card, currentDeck){
   try{
     var imgPath;
-    var deckName = currentDeck[deck];
+    var deckName = currentDeck[card];
     if (imageFiles[deckName] != undefined) {
       var index = imageFiles[deckName];
       imgPath = index[card];
