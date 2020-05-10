@@ -2,7 +2,7 @@
 const config = require('../config/config.json');
 
 //load image files
-const riderwaite = require('../img/riderwaiteimg.js');
+const riderwaite = require('../img/riderwaiteimg.json');
 
 const imageFiles = {
   'riderwaite': riderwaite
