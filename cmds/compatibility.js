@@ -3,12 +3,12 @@ const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
 const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
-const spread = ["present", "problem", "change", "strengths", "weaknesses", "best outcome"];
+const spread = ['your wants in relationship', 'their wants in relationship', 'your differences', 'your similarities', 'emotional compatibility', 'physical compatibility', 'mental compatibility'];
 
-async function guidespread (args, message) {
+async function compatibility (args, message) {
   try{
     var hand = [];
-    var pullCount = 5;
+    var pullCount = 6;
     var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i]);
@@ -26,4 +26,4 @@ async function guidespread (args, message) {
   }
 }
 
-module.exports = guidespread;
+module.exports = compatibility;

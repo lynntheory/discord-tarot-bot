@@ -1,14 +1,15 @@
+const Discord = require('discord.js');
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
 const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
-const spread = ["present", "problem", "change", "strengths", "weaknesses", "best outcome"];
+const spread = ['you', 'partner', 'dynamic'];
 
-async function guidespread (args, message) {
+async function threelove (args, message) {
   try{
     var hand = [];
-    var pullCount = 5;
+    var pullCount = 2;
     var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i]);
@@ -26,4 +27,4 @@ async function guidespread (args, message) {
   }
 }
 
-module.exports = guidespread;
+module.exports = threelove;

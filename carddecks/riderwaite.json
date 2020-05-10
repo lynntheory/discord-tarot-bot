@@ -1,5 +1,6 @@
 {
   "deck": "Rider Waite",
+  "images": "yes",
   "cards": [
     "The Fool",
     "The Magician",
@@ -115,7 +116,7 @@
   "Death Reversed": "Fear of change, holding on, stagnation, decay",
   "Temperance": "Middle path, patience, finding meaning",
   "Temperance Reversed": "Extremes, excess, lack of balance, lack of harmony",
-  "The Devil": "Materialism, playfulness, pleasure, addictin",
+  "The Devil": "Materialism, playfulness, pleasure, addiction",
   "The Devil Reversed": "Freedom, release, restoring control",
   "The Tower": "Upheaval, disaster, foundational shift",
   "The Tower Reversed": "Disaster avoided, delaying disaster, fear of suffering",
