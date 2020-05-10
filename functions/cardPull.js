@@ -2,7 +2,7 @@
 const config = require('../config/config.json');
 
 module.exports.cardPull = function (hand, pullCount, currentDeck) {
-  var activeDeck = JSON.parse(JSON.stringify(currentDeck[cards]));
+  var activeDeck = JSON.parse(JSON.stringify(currentDeck.cards));
   while (hand.length <= pullCount) {
     var cardMax = activeDeck.length;
     var random = Math.floor(Math.random() * (cardMax - 1));

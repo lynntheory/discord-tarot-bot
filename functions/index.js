@@ -41,6 +41,7 @@ module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
     var currentDeck = deck.deckCheck(args[1]);
+    console.log(currentDeck);
     return commands[args[0]](args, message, currentDeck);
   } else {
     message.reply('This command does not exist!');
