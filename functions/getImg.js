@@ -5,13 +5,13 @@ const config = require('../config/config.json');
 const riderwaite = require('../img/rider-waite/riderwaiteimg.json');
 
 const imageFiles = {
-  'riderwaite': riderwaite
+  'Rider Waite': riderwaite
 }
 
 module.exports.getImg = function(card, currentDeck){
   try{
     var imgPath;
-    var deckName = currentDeck[card];
+    var deckName = currentDeck.deck;
     if (imageFiles[deckName] != undefined) {
       var index = imageFiles[deckName];
       imgPath = index[card];
