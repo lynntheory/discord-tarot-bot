@@ -9,7 +9,7 @@ async function fivelove (args, message, currentDeck) {
   try{
     var hand = [];
     var pullCount = 4;
-    var cards = mechanics.cardPull(hand, pullCount);
+    var cards = mechanics.cardPull(hand, pullCount, currentDeck);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i], currentDeck);
       var imgPath = image.getImg(cards[i], currentDeck);
