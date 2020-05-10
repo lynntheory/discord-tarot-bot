@@ -1,10 +1,9 @@
 //imports
 const config = require('../config/config.json');
-const deck = require('../carddecks/riderwaite.json');
 
-module.exports.checkBook = function(card){
+module.exports.checkBook = function(card, currentDeck){
   try{
-    var meaning = deck[card];
+    var meaning = currentDeck[card];
     return meaning;
   } catch (err) {
     console.log(err);

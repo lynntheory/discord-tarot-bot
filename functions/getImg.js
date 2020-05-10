@@ -1,10 +1,23 @@
 //imports
 const config = require('../config/config.json');
-const index = require('../img/rider-waite/riderwaiteimg.json');
 
-module.exports.getImg = function(card){
+//load image files
+const riderwaite = require('../img/riderwaiteimg.js');
+
+const imageFiles = {
+  'riderwaite': riderwaite
+}
+
+module.exports.getImg = function(card, currentDeck){
   try{
-    var imgPath = index[card];
+    var imgPath;
+    var deckName = currentDeck[deck];
+    if (imageFiles[deckName] != undefined) {
+      var index = imageFiles[deckName];
+      imgPath = index[card];
+    } else {
+      imgPath = null;
+    }
     return imgPath;
   } catch (err) {
     console.log(err);

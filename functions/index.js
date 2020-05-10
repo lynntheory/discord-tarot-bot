@@ -1,5 +1,6 @@
 //required files
 const config = require('../config/config.json');
+const deck = require('../functions/deckCheck.js');
 
 //commands import
 const oneCard = require('../cmds/onecard.js');
@@ -39,7 +40,8 @@ const commands = {
 module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
-    return commands[args[0]](args, message);
+    var currentDeck = deck.deckCheck(args[1]);
+    return commands[args[0]](args, message, currentDeck);
   } else {
     message.reply('This command does not exist!');
     return;

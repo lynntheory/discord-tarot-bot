@@ -5,14 +5,14 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/cardPull.js');
 const spread = ['today', 'tomorrow', 'day 3', 'day 4', 'day 5', 'day 6', 'day 7', 'week overall'];
 
-async function sevenday (args, message) {
+async function sevenday (args, message, currentDeck) {
   try{
     var hand = [];
     var pullCount = 7;
     var cards = mechanics.cardPull(hand, pullCount);
     for (var i = 0; i <= pullCount; i++) {
-      var meaning = book.checkBook(cards[i]);
-      var imgPath = image.getImg(cards[i]);
+      var meaning = book.checkBook(cards[i], currentDeck);
+      var imgPath = image.getImg(cards[i], currentDeck);
       message.channel.send({embed: {
         title: `Your card for the ${spread[i]} is ${cards[i]}.`,
         description: `Card Meaning: ${meaning}`,

@@ -1,20 +1,19 @@
 //imports
 const config = require('../config/config.json');
-const deck = require('../carddecks/riderwaite.json');
 
-module.exports.cardPull = function (hand, pullCount) {
-  var currentDeck = JSON.parse(JSON.stringify(deck.cards));
+module.exports.cardPull = function (hand, pullCount, currentDeck) {
+  var activeDeck = JSON.parse(JSON.stringify(currentDeck.cards));
   while (hand.length <= pullCount) {
-    var cardMax = currentDeck.length;
+    var cardMax = activeDeck.length;
     var random = Math.floor(Math.random() * (cardMax - 1));
-    var pull = currentDeck[random];
-    currentDeck.splice(currentDeck.indexOf(pull), 1 );
+    var pull = activeDeck[random];
+    activeDeck.splice(activeDeck.indexOf(pull), 1 );
     var coin = Math.floor(Math.random() * 2);
     if (coin == 1) {
       pull = `${pull} Reversed`;
     }
     hand.push(pull);
   }
-  currentDeck.length = 0;
+  activeDeck.length = 0;
   return hand;
 }
