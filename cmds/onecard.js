@@ -1,20 +1,23 @@
 //imports
 const config = require('../config/config.json');
 const book = require('../functions/checkBook.js');
-const library = require('../functions/deckCheck.js');
+const image = require('../functions/getImg.js');
+const mechanics = require('../functions/cardPull.js');
 
-async function onecard (args, message) {
+async function onecard (args, message, currentDeck) {
   try{
-    var deck = JSON.parse(JSON.stringify(library.deckCheck(message)));
-    if (deck == undefined) {
-      message.reply ("Error retrieving deck.");
-    }
-    var cardMax = deck.cards.length;
-    var random = Math.floor(Math.random() * (cardMax - 1));
-    var card = deck.cards[random];
-    message.channel.send(`Your card is ${card}.`);
-    var meaning = book.checkBook(card, deck);
-    message.channel.send(meaning);
+    var hand = [];
+    var pullCount = 1;
+    var cards = mechanics.cardPull(hand, pullCount, currentDeck);
+    var meaning = book.checkBook(cards[0], currentDeck);
+    var imgPath = image.getImg(cards[0], currentDeck);
+    message.channel.send({embed: {
+      title: `Your card is ${cards[0]}.`,
+      description: `Card Meaning: ${meaning}`,
+      image: {
+        "url": `${imgPath}`
+      }
+    }})
   } catch (err) {
     console.log(err);
   }
