@@ -1,6 +1,6 @@
 {
   "spreads": [
-    "oneCard",
+    "one",
     "time",
     "threeLove",
     "fiveLove",
@@ -12,7 +12,7 @@
     "sixMonth",
     "twelveMonth"
   ],
-  "oneCard": {
+  "one": {
     "name": "One Card",
     "positions": "message",
     "pullCount": 1

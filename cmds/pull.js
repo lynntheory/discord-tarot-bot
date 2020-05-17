@@ -11,7 +11,7 @@ async function pull (message, spread, currentDeck) {
     var hand = [];
     var positions = [];
     var pullCount;
-    spreadInfo.getSpread(spread, positions, pullCount);
+    spreadInfo.getSpread(message, spread, positions, pullCount);
     var cards = mechanics.cardPull(hand, pullCount, currentDeck);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i], currentDeck);
