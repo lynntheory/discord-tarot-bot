@@ -43,7 +43,7 @@
     "pullCount": 6
   },
   "crossSpread": {
-    "name": "Seer's Cross",
+    "name": "Seer\'s Cross",
     "positions": ["situation", "challenge", "known", "unknown", "past", "future", "how you see you", "how others see you", "hopes and fears", "outcome"],
     "pullCount": 9
   },
@@ -56,11 +56,6 @@
     "name": "Seven Day Outlook",
     "positions": ["today", "tomorrow", "day 3", "day 4", "day 5", "day 6", "day 7", "week overall"],
     "pullCount": 7
-  },
-  "sixMonth": {
-    "name": "Six Month Outlook",
-    "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "overall"],
-    "pullCount": 6
   },
   "sixMonth": {
     "name": "Six Month Outlook",
