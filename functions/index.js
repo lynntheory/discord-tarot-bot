@@ -18,6 +18,7 @@ module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
     var spread = args[1];
+    console.log(`Spread: ${spread}`)
     var currentDeck = deck.deckCheck(args[2]);
     return commands[args[0]](message, spread, currentDeck);
   } else {

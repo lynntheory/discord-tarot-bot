@@ -11,6 +11,7 @@ async function pull (message, spread, currentDeck) {
     var hand = [];
     var positions = [];
     var pullCount;
+    console.log(`Spread: ${spread}`);
     spreadInfo.getSpread(message, spread, positions, pullCount);
     var cards = mechanics.cardPull(hand, pullCount, currentDeck);
     for (var i = 0; i <= pullCount; i++) {

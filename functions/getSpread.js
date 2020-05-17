@@ -3,6 +3,7 @@ const config = require('../config/config.json');
 const spreadIndex = require('../spreads/spreads.json');
 
 module.exports.getSpread = function(message, spread, positions, pullCount){
+  console.log(`Spread: ${spread}`);
   var spreadList = spreadIndex[spread];
   if (spreadList[spread] != undefined) {
     var currentSpread = spreadIndex[spread];
