@@ -17,7 +17,7 @@ const commands = {
 module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
-    var spread = JSON.stringify(arg[1]);
+    var spread = JSON.stringify(args[1]);
     var currentDeck = deck.deckCheck(args[2]);
     return commands[args[0]](message, spread, currentDeck);
   } else {
