@@ -12,64 +12,64 @@
     "sixMonth",
     "twelveMonth"
   ],
-  "oneCard": [
+  "oneCard": {
     "name": "One Card",
     "positions": "message",
     "pullCount": 1
-  ],
-  "time": [
+  },
+  "time": {
     "name": "Time Spread",
     "positions": ["past", "present", "future"],
     "pullCount": 2
-  ],
-  "threeLove": [
+  },
+  "threeLove": {
     "name": "Three Card Love",
     "positions": ["you", "partner", "dynamic"],
     "pullCount": 2
-  ],
-  "fiveLove": [
+  },
+  "fiveLove": {
     "name": "Five Card Love",
     "positions": ["you and current issues", "past relationships/influences", "issues you need to address", "the areas you need to develop", "the likely outcome"],
     "pullCount": 4
-  ],
-  "fiveRelationship": [
+  },
+  "fiveRelationship": {
     "name": "Five Card Relationship",
     "positions": ["your place/perspective", "partner\'s place/perspective", "the foundation of relationship", "present state/issues", "likely outcome"],
     "pullCount": 4
-  ],
-  "compatibility": [
+  },
+  "compatibility": {
     "name": "Compatibility",
     "positions": ["your wants in relationship", "their wants in relationship", "your differences", "your similarities", "emotional compatibility", "physical compatibility", "mental compatibility"],
     "pullCount": 6
-  ],
-  "crossSpread": [
+  },
+  "crossSpread": {
     "name": "Seer's Cross",
     "positions": ["situation", "challenge", "known", "unknown", "past", "future", "how you see you", "how others see you", "hopes and fears", "outcome"],
     "pullCount": 9
-  ],
-  "guideSpread": [
+  },
+  "guideSpread": {
     "name": "Guidance Spread",
     "positions": ["present", "problem", "change", "strengths", "weaknesses", "best outcome"],
     "pullCount": 5
-  ],
-  "sevenDay": [
+  },
+  "sevenDay": {
     "name": "Seven Day Outlook",
     "positions": ["today", "tomorrow", "day 3", "day 4", "day 5", "day 6", "day 7", "week overall"],
     "pullCount": 7
-  ],
-  "sixMonth": [
+  },
+  "sixMonth": {
     "name": "Six Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "overall"],
     "pullCount": 6
-  ],
-  "sixMonth": [
+  },
+  "sixMonth": {
     "name": "Six Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "overall"],
     "pullCount": 6
-  ],
-  "twelveMonth": [
+  },
+  "twelveMonth": {
     "name": "Twelve Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "month 7", "month 8", "month 9", "month 10", "month 11", "month 12", "overall"],
     "pullCount": 12
-  ]
+  }
 }
