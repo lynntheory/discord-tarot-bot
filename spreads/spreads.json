@@ -1,17 +1,4 @@
 {
-  "spreads": [
-    "one",
-    "time",
-    "threeLove",
-    "fiveLove",
-    "fiveRelationship",
-    "compatibility",
-    "crossSpread",
-    "guideSpread",
-    "sevenDay",
-    "sixMonth",
-    "twelveMonth"
-  ],
   "one": {
     "name": "One Card",
     "positions": "message",
