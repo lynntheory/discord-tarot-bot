@@ -24,6 +24,7 @@ async function pull (message, spread, currentDeck) {
           image: {
             "url": `${imgPath}`
           }
+        }})
       } else {
         message.channel.send({embed: {
           title: `Your card is ${cards[0]}.`,
@@ -31,7 +32,6 @@ async function pull (message, spread, currentDeck) {
           image: {
             "url": `${imgPath}`
           }
-      }
       }})
     }
   } catch (err) {
