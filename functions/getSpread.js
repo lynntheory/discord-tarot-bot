@@ -4,11 +4,10 @@ const spreadIndex = require('../spreads/spreads.json');
 
 module.exports.getSpread = function(message, spread, positions, pullCount){
   try {
-    spread = JSON.stringify(spread);
-    var spreads = JSON.parse(JSON.stringify(spreadIndex.index));
+    var spreads = JSON.parse(spreadIndex.index);
     if (spreads[spread] != undefined){
-      var positions = spreadIndex[spread][2];
-      var pullCount = spreadIndex[spread][3];
+      var positions = JSON.parse(spreadIndex[spread][2]);
+      var pullCount = JSON.stringify(spreadIndex[spread][3]);
       return positions, pullCount;
     } else {
       message.reply('Cannot recognize card spread.');
