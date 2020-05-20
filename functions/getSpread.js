@@ -6,8 +6,8 @@ const spreadIndex = require('../spreads/spreads.json');
 
 module.exports.getSpread = function(message, spread, positions, pullCount){
   try {
-    console.log(spread);
     if (spreadIndex[spread] != undefined){
+      console.log(spreadIndex[spread]);
       var positions = spreadIndex[spread][positions];
       var pullCount = spreadIndex[spread][pullCount];
       return positions, pullCount;
