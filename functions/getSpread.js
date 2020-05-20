@@ -8,8 +8,10 @@ module.exports.getSpread = function(message, spread, positions, pullCount){
   try {
     if (spreadIndex[spread] != undefined){
       console.log(spreadIndex[spread]);
-      var positions = spreadIndex[spread][positions];
-      var pullCount = spreadIndex[spread][pullCount];
+      var spreadData = spreadIndex[spread];
+      var positions = spreadData.positions;
+      var pullCount = spreadData.pullCount;
+      console.log(positions, pullCount);
       return positions, pullCount;
     } else {
       message.reply('Cannot recognize card spread.');
