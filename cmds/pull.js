@@ -34,7 +34,7 @@ async function pull (message, spread, currentDeck) {
           }
       }})
     }
-  } catch (err) {
+  }} catch (err) {
     console.log(err);
   }
 }
