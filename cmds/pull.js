@@ -9,22 +9,29 @@ const spreadInfo = require('../functions/getSpread.js');
 async function pull (message, spread, currentDeck) {
   try{
     var hand = [];
-    var positions = [];
-    var pullCount;
     var spreadData;
     spreadData = spreadInfo.getSpread(message, spread, spreadData);
-    positions = spreadData.positions;
-    pullCount = spreadData.pullCount;
+    var positions = spreadData.positions;
+    var pullCount = spreadData.pullCount;
     var cards = mechanics.cardPull(hand, pullCount, currentDeck);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i], currentDeck);
       var imgPath = image.getImg(cards[i], currentDeck);
-      message.channel.send({embed: {
-        title: `Your card for the ${positions[i]} is ${cards[i]}.`,
-        description: `Card Meaning: ${meaning}`,
-        image: {
-          "url": `${imgPath}`
-        }
+      if (spread != "one"){
+        message.channel.send({embed: {
+          title: `Your card for the ${positions[i]} is ${cards[i]}.`,
+          description: `Card Meaning: ${meaning}`,
+          image: {
+            "url": `${imgPath}`
+          }
+      } else {
+        message.channel.send({embed: {
+          title: `Your card is ${cards[0]}.`,
+          description: `Card Meaning: ${meaning}`,
+          image: {
+            "url": `${imgPath}`
+          }
+      }
       }})
     }
   } catch (err) {
