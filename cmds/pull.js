@@ -8,11 +8,13 @@ const spreadInfo = require('../functions/getSpread.js');
 
 async function pull (message, spread, currentDeck) {
   try{
-    var hand;
+    var hand = [];
+    var positions = [];
+    var pullCount;
     var spreadData;
     spreadData = spreadInfo.getSpread(message, spread, spreadData);
-    var positions = spreadData.positions;
-    var pullCount = spreadData.pullCount;
+    positions = spreadData.positions;
+    pullCount = spreadData.pullCount;
     var cards = mechanics.cardPull(hand, pullCount, currentDeck);
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i], currentDeck);
