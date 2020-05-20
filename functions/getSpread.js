@@ -7,7 +7,6 @@ const spreadIndex = require('../spreads/spreads.json');
 module.exports.getSpread = function(message, spread, spreadData){
   try {
     if (spreadIndex[spread] != undefined){
-      console.log(spreadIndex[spread]);
       spreadData = spreadIndex[spread];
       return spreadData;
     } else {
