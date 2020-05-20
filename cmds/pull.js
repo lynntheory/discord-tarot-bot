@@ -18,7 +18,6 @@ async function pull (message, spread, currentDeck) {
       for (var i = 0; i <= pullCount; i++) {
         var meaning = book.checkBook(cards[i], currentDeck);
         var imgPath = image.getImg(cards[i], currentDeck);
-
           message.channel.send({embed: {
             title: `Your card for the ${positions[i]} is ${cards[i]}.`,
             description: `Card Meaning: ${meaning}`,
@@ -26,14 +25,16 @@ async function pull (message, spread, currentDeck) {
               "url": `${imgPath}`
             }
           }})
-        }} 
+        }}
     else {
-        message.channel.send({embed: {
-          title: `Your card is ${cards[0]}.`,
-          description: `Card Meaning: ${meaning}`,
-          image: {
-            "url": `${imgPath}`
-          }
+      var meaning = book.checkBook(cards[0], currentDeck);
+      var imgPath = image.getImg(cards[0], currentDeck);
+      message.channel.send({embed: {
+        title: `Your card is ${cards[0]}.`,
+        description: `Card Meaning: ${meaning}`,
+        image: {
+          "url": `${imgPath}`
+        }
       }})
     }
   } catch (err) {
