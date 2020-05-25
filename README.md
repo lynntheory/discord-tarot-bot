@@ -1,5 +1,5 @@
 # Tarot Bot for Discord
-Discord bot for doing tarot readings
+This is a Discord chatbot for doing tarot and other fortune telling card deck readings.
 
 ## Installation
 1. Clone the repository, or download and extract the zip file (preferrably from the release page)
@@ -24,4 +24,5 @@ All commands in the ``cmds`` folder require use of the prefix stored in the ``co
 
 **[the official Discord API documentation](https://discordapp.com/developers/docs/intro)**
 
-https://www.sacred-texts.com/tarot/pkt/index.htm
+**[Rider-Waite Card Images](https://www.sacred-texts.com/tarot/pkt/index.htm)**
+
