@@ -58,5 +58,20 @@
     "name": "Twelve Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "month 7", "month 8", "month 9", "month 10", "month 11", "month 12", "overall"],
     "pullCount": 12
+  },
+  "busStrat": {
+    "name": "Business Strategy",
+    "positions": ["current situation", "current challenged", "where to find help", "long term gains", "short term gains", "strengths", "weaknesses", "what to focus on now", "what to focus on in future", "opportunities"],
+    "pullCount": 9
+  },
+  "choice": {
+    "name": "Choice",
+    "positions": ["Option A expectations", "Option A expectations", "Option A expectations", "Option B expectations", "Option B expectations", "Option B expectations", "Likely outcome for A", "Likely outcome for B", "what you need to know before choosing"],
+    "pullCount": 8
+  },
+  "lifeatm": {
+    "name": "Life Right Now",
+    "positions": ["present self", "resources, money matters", "mental, interal communication", "home and family", "creativity, progeny", "job, occupation, physical health", "love, romance", "changes to come", "knowledge, spirituality", "career, ambitions", "community, allies", "challenges, losses"],
+    "pullCount": 11
   }
 }
