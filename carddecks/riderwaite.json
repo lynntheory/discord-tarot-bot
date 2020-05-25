@@ -1,5 +1,6 @@
 {
   "deck": "Rider Waite",
+  "images": "yes",
   "cards": [
     "The Fool",
     "The Magician",
@@ -85,15 +86,15 @@
     "King of Pentacles"
   ],
 
-  "The Fool": "Beginnings, innocence, wonder, foolishness",
-  "The Fool Reversed": "Being naive, taken advantage of, recklessness",
-  "The Magician": "Willpower, creation, mastery, adaptation",
-  "The Magician Reversed": "Trickery, cunning, deception, craftiness",
-  "The High Priestess": "Inner voice, intuition, divine truth, wisdom, unconscious",
-  "The High Priestess Reversed": "Loss of self, repression, secrets, hidden agendas",
-  "The Empress": "Beauty, fertility, nurturing, luxury, creativity",
-  "The Empress Reversed": "Smothering, excess, selfishness",
-  "The Emperor": "Structure, ambition, authority, rationality",
+  "The Fool": "Beginnings, innocence, wonder, foolishness. The Fool shows us a person at the start of a new adventure. Slung over their shoulder is a small pack, which looks very minimal for the undertaking. Unbenownst to the Fool, they are about to step off a cliff. The Fool is focussed on the start of their expedition, not the challenges posed by the mountains in the distance. The Fool can represent a time of new journeys, of throwing caution to the wind and siezing the moment. The world is your oyster, and it shows you its magic. This card is an invitation to relax and enjoy the trip.",
+  "The Fool Reversed": "Being naive, taken advantage of, recklessness. The Fool shows us a person at the start of a new adventure. Slung over their shoulder is a small pack, which looks very minimal for the undertaking. Unbenownst to the Fool, they are about to step off a cliff. The Fool is focussed on the start of their expedition, not the challenges posed by the mountains in the distance. Reversed like this, the Fool suggests you are at the start of a project that you are ill-prepared for, either in resources or timing or understanding. You fear the unkown as you worry you might step off that cliff before you. Conversely, you could use a little more fear, as you are taking a lot of risks.",
+  "The Magician": "Willpower, creation, mastery, adaptation. The Magician stands between the material and the spiritual, channeling energy from on high into the ground below. While the Magician's robe is white with the purity of new creation, their cloak is red with experience and knowledge. The Magician has all four symbols of the minor arcana before them, signifying preparedness. The Magician symbolizes having everything you need to make your dreams come true right at your fingertips. Now is a great time to move forward on a project. Vision is key, though, and the Magician calls for you to focus. Focus on the 'why' of the project, beyond the material need. Focus on the task that will see it through. Be methodical in your planning.",
+  "The Magician Reversed": "Trickery, cunning, deception, craftiness. The Magician stands between the material and the spiritual, channeling energy from on high into the ground below. While the Magician's robe is white with the purity of new creation, their cloak is red with experience and knowledge. The Magician has all four symbols of the minor arcana before them, signifying preparedness. Reversed like this, you are stuck in your progress on a project or course of action. Either you are hesitant to start or you lost sight of the goal along the way. You are missing either that material element or that spiritual one. You have skills and talents that are not being used to their fullest potential. Figure out what stands in your way.",
+  "The High Priestess": "Inner voice, intuition, divine truth, wisdom, unconscious. The High Priestess sits in front of the archway that seperates the conscious and subconscious realms. Only the initiated can step through the arch. The High Priestess guards this liminal space. The High Priestess guards the subconscious mind and teaches hidden mysteries. The world is not always what it seems and things influence you in ways you don't always see. Now is a good time to tune into your intuition and find truths within yourself. The High Priestess is a signal to embrace compassion and empathy.",
+  "The High Priestess Reversed": "Loss of self, repression, secrets, hidden agendas. The High Priestess sits in front of the archway that seperates the conscious and subconscious realms. Only the initiated can step through the arch. The High Priestess guards this liminal space. Reversed like this, the High Priestess warns you not to get swept up in the opinions of others and their drama. Now is a time to trust yourself. This is also a good time to let your intuition show. Now might also be a time of gossip and hidden agendas in your life. Now is the time for open conversations and addressing such matters.",
+  "The Empress": "Beauty, fertility, nurturing, luxury, creativity. The Empress is a beautiful, full figured woman with a peaceful aura about her. She wears a crown of twelve stars, showing her connection to the mystical realm and the natural world. All around her are signs of nature and fertility. The Empress calls for you to be creative, taking up a new hobby or expressing yourself in some creative manner. You also need to nurture your creations. You are in a period of growth; tend the seeds you sowed.The Empress can also hint at the birth of a baby or of an idea.",
+  "The Empress Reversed": "Smothering, excess, selfishness.The Empress is a beautiful, full figured woman with a peaceful aura about her. She wears a crown of twelve stars, showing her connection to the mystical realm and the natural world. All around her are signs of nature and fertility. Now is the time for self-love and self-care. Fill your own energy reserves before giving more to others. Now is also a good time to reconnect with nature. You may feel you are currently in a creative roadblock. Now is the time to break that and focus on moving forward. Also, be sure to not be too over protective or controlling over the things you create.",
+  "The Emperor": "Structure, ambition, authority, rationality. ",
   "The Emperor Reversed": "Chaos, anger, tyranny, domination",
   "The Hierophant": "Tradition, legacy, society, organized religion",
   "The Hierophant Reversed": "Servitude, convention, blind faith",
