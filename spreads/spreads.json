@@ -16,7 +16,7 @@
   },
   "fiveCard": {
     "name": "Five Card",
-    "positions": ["preconceived idea", "the present", "the unnexpected", "the near future", "the distant future"],
+    "positions": ["preconceived idea", "the present", "the unexpected", "the near future", "the distant future"],
     "pullCount": 4
   },
   "fiveLove": {
