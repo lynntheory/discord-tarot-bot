@@ -1,0 +1,7 @@
+{
+  "one": {
+    "name": "One Card",
+    "positions": "message",
+    "pullCount": 1
+  }
+}
