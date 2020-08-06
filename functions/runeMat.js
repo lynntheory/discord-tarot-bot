@@ -4,8 +4,8 @@ const runeEmoji = require('../img/runes/runesemoji.json');
 
 module.exports.runeMat = function (hand, coordArray, pullCount) {
   var runeGrid = [];
-  for (var r = 0; r <= 19; r++){
-    for (var c = 0; c <= 19; c++){
+  for (var r = 0; r <= 13; r++){
+    for (var c = 0; c <= 13; c++){
       runeGrid[r][c] = ":black_large_square:";
     }
   }
