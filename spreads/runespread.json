@@ -1,7 +1,12 @@
 {
   "one": {
-    "name": "One Card",
+    "name": "One Rune",
     "positions": "message",
     "pullCount": 1
+  },
+  "three": {
+    "name": "Three Rune",
+    "positions": ["problem or issue", "course of action", "outcome"],
+    "pullCount": 2
   }
 }
