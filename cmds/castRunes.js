@@ -8,11 +8,10 @@ const coords = require('../functions/runePlace.js');
 const spreadInfo = require('../functions/getRuneSpread.js');
 const mat = require('../functions/runeMat.js');
 
-var currentDeck = 'runes';
-
 async function castRunes (message) {
   try{
     var hand = [];
+    var currentDeck = 'runes';
     var positions = [];
     var pullCount = 8;
     var runes = mechanics.runePull(hand, pullCount, currentDeck);
