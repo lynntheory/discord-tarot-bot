@@ -6,8 +6,8 @@ module.exports.runePlace = function (pullCount) {
   coordArray[0] = new Array ();
   coordArray[1] = new Array ();
   for (var i = 0; i <= pullCount; i++) {
-    var xCoord = Math.floor(Math.random() * 20);
-    var yCoord = Math.floor(Math.random() * 20);
+    var xCoord = Math.floor(Math.random() * 14);
+    var yCoord = Math.floor(Math.random() * 14);
     for (var z = 0; z <= coordArray[0].length; z++) {
       if (xCoord == coordArray[0][i]) {
         if (yCoord == coordArray[1][i]) {
