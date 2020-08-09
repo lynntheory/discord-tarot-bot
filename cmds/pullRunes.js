@@ -9,7 +9,6 @@ const spreadInfo = require('../functions/getRuneSpread.js');
 async function pullRunes (message, spread) {
   try{
     var hand = [];
-    var currentDeck = 'runes';
     var spreadData;
     spreadData = spreadInfo.getRuneSpread(message, spread, spreadData);
     var positions = spreadData.positions;
