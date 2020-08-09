@@ -15,9 +15,9 @@ async function castRunes (message) {
     var hand = [];
     var positions = [];
     var pullCount = 8;
-    var hand = mechanics.runePull(hand, pullCount, currentDeck);
+    var runes = mechanics.runePull(hand, pullCount, currentDeck);
     var coordArray = coords.runePlace(pullCount);
-    var runeGrid = mat.runeMat(hand, coordArray, pullCount);
+    var runeGrid = mat.runeMat(runes, coordArray, pullCount);
 
     message.channel.send(`${runeGrid[0]} \n ${runeGrid[1]} \n ${runeGrid[2]}\n ${runeGrid[3]}\n ${runeGrid[4]}\n ${runeGrid[5]}\n ${runeGrid[6]}\n ${runeGrid[7]}\n ${runeGrid[8]}\n ${runeGrid[9]}\n ${runeGrid[10]}\n ${runeGrid[11]}\n ${runeGrid[12]}\n ${runeGrid[13]}`);
 
