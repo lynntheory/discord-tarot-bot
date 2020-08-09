@@ -11,9 +11,21 @@ const mat = require('../functions/runeMat.js');
 async function castRunes (message, spread, currentDeck) {
   try{
     var hand = [];
-    var positions = [];
     var pullCount = 8;
     var emptyGrid = [];
+      var emptyGrid[0]= [];
+      var emptyGrid[1]= [];
+      var emptyGrid[2]= [];
+      var emptyGrid[3]= [];
+      var emptyGrid[4]= [];
+      var emptyGrid[5]= [];
+      var emptyGrid[6]= [];
+      var emptyGrid[7]= [];
+      var emptyGrid[8]= [];
+      var emptyGrid[9]= [];
+      var emptyGrid[10]= [];
+      var emptyGrid[11]= [];
+      var emptyGrid[12]= [];
     for (var r = 0; r <= 13; r++){
       for (var c = 0; c <= 13; c++){
         emptyGrid[r][c] = ":black_large_square:";
