@@ -20,14 +20,13 @@ async function castRunes (message, spread, currentDeck) {
       }
     }
     var runes = mechanics.runePull(hand, pullCount, currentDeck);
-    var runeGrid = coords.runePlace(runes, emptyGrid, pullCount);
-    message.channel.send(`${runeGrid[0]} \n ${runeGrid[1]} \n ${runeGrid[2]}\n ${runeGrid[3]}\n ${runeGrid[4]}\n ${runeGrid[5]}\n ${runeGrid[6]}\n ${runeGrid[7]}\n ${runeGrid[8]}\n ${runeGrid[9]}\n ${runeGrid[10]}\n ${runeGrid[11]}\n ${runeGrid[12]}\n ${runeGrid[13]}`);
+    coords.runePlace(runes, emptyGrid, pullCount);
 
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(cards[i], currentDeck);
       var imgPath = image.getImg(cards[i], currentDeck);
       message.channel.send({embed: {
-        title: `Your rune at the ${handEmogi[i]} is ${cards[i]}.`,
+        title: `Your # ${i} rune is ${cards[i]}.`,
         description: `Rune Meaning: ${meaning}`,
         image: {
           "url": `${imgPath}`
