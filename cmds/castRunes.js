@@ -13,19 +13,19 @@ async function castRunes (message, spread, currentDeck) {
     var hand = [];
     var pullCount = 8;
     var emptyGrid = [];
-      var emptyGrid[0]= [];
-      var emptyGrid[1]= [];
-      var emptyGrid[2]= [];
-      var emptyGrid[3]= [];
-      var emptyGrid[4]= [];
-      var emptyGrid[5]= [];
-      var emptyGrid[6]= [];
-      var emptyGrid[7]= [];
-      var emptyGrid[8]= [];
-      var emptyGrid[9]= [];
-      var emptyGrid[10]= [];
-      var emptyGrid[11]= [];
-      var emptyGrid[12]= [];
+      var emptyGrid[0] = new Array ();
+      var emptyGrid[1] = new Array ();
+      var emptyGrid[2] = new Array ();
+      var emptyGrid[3] = new Array ();
+      var emptyGrid[4] = new Array ();
+      var emptyGrid[5] = new Array ();
+      var emptyGrid[6] = new Array ();
+      var emptyGrid[7] = new Array ();
+      var emptyGrid[8] = new Array ();
+      var emptyGrid[9] = new Array ();
+      var emptyGrid[10] = new Array ();
+      var emptyGrid[11] = new Array ();
+      var emptyGrid[12] = new Array ();
     for (var r = 0; r <= 13; r++){
       for (var c = 0; c <= 13; c++){
         emptyGrid[r][c] = ":black_large_square:";
