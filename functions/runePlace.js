@@ -2,7 +2,10 @@
 const config = require('../config/config.json');
 const emoji = require('../functions/getEmoji.js');
 
-module.exports.runePlace = function (message, runes, runeGrid,pullCount) {
+var runeGrid = [[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']],[[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:'],[':black_large_square:']]];
+
+module.exports.runePlace = function (message, runes, pullCount) {
+
   var coordArray = [];
   coordArray[0] = new Array ();
   coordArray[1] = new Array ();
@@ -10,15 +13,13 @@ module.exports.runePlace = function (message, runes, runeGrid,pullCount) {
     var rCoord = Math.floor(Math.random() * 14);
     var cCoord = Math.floor(Math.random() * 14);
     for (var z = 0; z <= coordArray[0].length; z++) {
-      if (rCoord == coordArray[0][i]) {
-        if (cCoord == coordArray[1][i]) {
-          i--;
-        } else {
-          coordArray[0].push(rCoord);
-          coordArray[1].push(cCoord);
-          var symbol = emoji.getEmoji(runes[i], currentDeck);
-          runeGrid[rCoord][cCoord] = `${symbol}`;
-        }
+      if ((rCoord == coordArray[0][i]) && (cCoord == coordArray[1][i])){
+        i--;
+      } else {
+        coordArray[0].push(rCoord);
+        coordArray[1].push(cCoord);
+        var symbol = emoji.getEmoji(runes[i], currentDeck);
+        runeGrid[rCoord][cCoord] = `${symbol}`;
       }
     }
   }
