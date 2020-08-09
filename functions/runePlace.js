@@ -2,7 +2,7 @@
 const config = require('../config/config.json');
 const emoji = require('../functions/getEmoji.js');
 
-module.exports.runePlace = function (runes, runeGrid,pullCount) {
+module.exports.runePlace = function (message, runes, runeGrid,pullCount) {
   var coordArray = [];
   coordArray[0] = new Array ();
   coordArray[1] = new Array ();
