@@ -20,7 +20,7 @@ async function castRunes (message, spread, currentDeck) {
       var meaning = book.checkBook(cards[i], currentDeck);
       var imgPath = image.getImg(cards[i], currentDeck);
       message.channel.send({embed: {
-        title: `Your # ${i} rune is ${cards[i]}.`,
+        title: `Your # ${i} rune is ${runes[i]}.`,
         description: `Rune Meaning: ${meaning}`,
         image: {
           "url": `${imgPath}`
