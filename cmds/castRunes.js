@@ -8,7 +8,7 @@ const coords = require('../functions/runePlace.js');
 const spreadInfo = require('../functions/getRuneSpread.js');
 const mat = require('../functions/runeMat.js');
 
-var currentDeck = runes;
+var currentDeck = 'runes';
 
 async function castRunes (message) {
   try{
