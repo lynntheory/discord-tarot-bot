@@ -8,7 +8,7 @@ const coords = require('../functions/runePlace.js');
 const spreadInfo = require('../functions/getRuneSpread.js');
 const mat = require('../functions/runeMat.js');
 
-async function castRunes (message) {
+async function castRunes (message, spread, currentDeck) {
   try{
     var hand = [];
     var positions = [];
