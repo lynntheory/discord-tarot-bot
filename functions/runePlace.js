@@ -7,17 +7,17 @@ module.exports.runePlace = function (runes, runeGrid,pullCount) {
   coordArray[0] = new Array ();
   coordArray[1] = new Array ();
   for (var i = 0; i <= pullCount; i++) {
-    var xCoord = Math.floor(Math.random() * 14);
-    var yCoord = Math.floor(Math.random() * 14);
+    var rCoord = Math.floor(Math.random() * 14);
+    var cCoord = Math.floor(Math.random() * 14);
     for (var z = 0; z <= coordArray[0].length; z++) {
-      if (xCoord == coordArray[0][i]) {
-        if (yCoord == coordArray[1][i]) {
+      if (rCoord == coordArray[0][i]) {
+        if (cCoord == coordArray[1][i]) {
           i--;
         } else {
-          coordArray[0].push(xCoord);
-          coordArray[1].push(yCoord);
+          coordArray[0].push(rCoord);
+          coordArray[1].push(cCoord);
           var symbol = emoji.getEmoji(runes[i], currentDeck);
-          runeGrid[xCoord][yCoord] = `${symbol}`;
+          runeGrid[rCoord][cCoord] = `${symbol}`;
         }
       }
     }
