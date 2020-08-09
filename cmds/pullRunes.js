@@ -6,7 +6,9 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/runePull.js');
 const spreadInfo = require('../functions/getRuneSpread.js');
 
-async function pullRunes (message, spread, currentDeck) {
+var currentDeck = 'runes';
+
+async function pullRunes (message, spread) {
   try{
     var hand = [];
     var spreadData;
