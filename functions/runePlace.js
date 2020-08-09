@@ -1,7 +1,8 @@
 //imports
 const config = require('../config/config.json');
+const emoji = require('../functions/getEmoji.js');
 
-module.exports.runePlace = function (pullCount) {
+module.exports.runePlace = function (runes, runeGrid,pullCount) {
   var coordArray = [];
   coordArray[0] = new Array ();
   coordArray[1] = new Array ();
@@ -15,9 +16,11 @@ module.exports.runePlace = function (pullCount) {
         } else {
           coordArray[0].push(xCoord);
           coordArray[1].push(yCoord);
+          var symbol = emoji.getEmoji(runes[i], currentDeck);
+          runeGrid[xCoord][yCoord] = `${symbol}`;
         }
       }
     }
   }
-  return coordArray;
+  return runeGrid;
 }
