@@ -2,12 +2,10 @@
 const config = require('../config/config.json');
 
 //load image files
-const riderwaite = require('../img/rider-waite/riderwaiteimg.json');
-//const runes = require('../img/runes/runesimg.json');
+const runesemoji = require('../img/runes/runesemoji.json');
 
 const imageFiles = {
-  'Rider Waite': riderwaite
-  //'runes': runes
+  'runes': runesemoji
 }
 
 module.exports.getImg = function(card, currentDeck){
@@ -18,7 +16,7 @@ module.exports.getImg = function(card, currentDeck){
       var index = imageFiles[deckName];
       imgPath = index[card];
     } else {
-      imgPath = "https://raw.githubusercontent.com/lynntheory/discord-tarot-bot/master/img/default.png";
+      imgPath = ":white_large_square:";
     }
     return imgPath;
   } catch (err) {

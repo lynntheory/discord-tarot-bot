@@ -2,7 +2,7 @@
 const config = require('../config/config.json');
 
 //load spreads
-const spreadIndex = require('../spreads/spreads.json');
+const spreadIndex = require('../spreads/runespread.json');
 
 module.exports.getSpread = function(message, spread, spreadData){
   try {
