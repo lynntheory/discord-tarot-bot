@@ -10,7 +10,7 @@ module.exports.runePlace = function (pullCount) {
     var yCoord = Math.floor(Math.random() * 20);
     for (var z = 0; z <= coordArray[0].length; z++) {
       if (xCoord == coordArray[0][i]) {
-        if (yCoord == coordArray[1][i] {
+        if (yCoord == coordArray[1][i]) {
           i--;
         } else {
           coordArray[0].push(xCoord);
