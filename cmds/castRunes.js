@@ -17,8 +17,8 @@ async function castRunes (message, spread, currentDeck) {
     coords.runePlace(message, runes, runeGrid, pullCount);
 
     for (var i = 0; i <= pullCount; i++) {
-      var meaning = book.checkBook(cards[i], currentDeck);
-      var imgPath = image.getImg(cards[i], currentDeck);
+      var meaning = book.checkBook(runes[i], currentDeck);
+      var imgPath = image.getImg(runes[i], currentDeck);
       message.channel.send({embed: {
         title: `Your # ${i} rune is ${runes[i]}.`,
         description: `Rune Meaning: ${meaning}`,
