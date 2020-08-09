@@ -4,7 +4,7 @@ const config = require('../config/config.json');
 //load spreads
 const spreadIndex = require('../spreads/runespread.json');
 
-module.exports.getSpread = function(message, spread, spreadData){
+module.exports.getRuneSpread = function(message, spread, spreadData){
   try {
     if (spreadIndex[spread] != undefined){
       spreadData = spreadIndex[spread];
