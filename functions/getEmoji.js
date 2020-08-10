@@ -5,20 +5,21 @@ const config = require('../config/config.json');
 const runesemoji = require('../img/runes/runesemoji.json');
 
 const imageFiles = {
-  'runes': runesemoji
+  'Runes': runesemoji
 }
 
-module.exports.getImg = function(card, currentDeck){
+module.exports.getEmoji = function(card, currentDeck){
   try{
-    var imgPath;
+    var emojiPath;
     var deckName = currentDeck.deck;
     if (imageFiles[deckName] != undefined) {
       var index = imageFiles[deckName];
-      imgPath = index[card];
+      emojiPath = index[card];
+      console.log(emojiPath);
     } else {
-      imgPath = ":white_large_square:";
+      emojiPath = ":white_large_square:";
     }
-    return imgPath;
+    return emojiPath;
   } catch (err) {
     console.log(err);
   }

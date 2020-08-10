@@ -6,24 +6,21 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/runePull.js');
 const coords = require('../functions/runePlace.js');
 const spreadInfo = require('../functions/getRuneSpread.js');
-const mat = require('../functions/runeMat.js');
+const emoji = require('../functions/getEmoji.js');
 
 async function castRunes (message, spread, currentDeck) {
   try{
     var hand = [];
-    var positions = [];
     var pullCount = 8;
     var runes = mechanics.runePull(hand, pullCount, currentDeck);
-    var coordArray = coords.runePlace(pullCount);
-    var runeGrid = mat.runeMat(runes, coordArray, pullCount);
-
-    message.channel.send(`${runeGrid[0]} \n ${runeGrid[1]} \n ${runeGrid[2]}\n ${runeGrid[3]}\n ${runeGrid[4]}\n ${runeGrid[5]}\n ${runeGrid[6]}\n ${runeGrid[7]}\n ${runeGrid[8]}\n ${runeGrid[9]}\n ${runeGrid[10]}\n ${runeGrid[11]}\n ${runeGrid[12]}\n ${runeGrid[13]}`);
+    coords.runePlace(message, runes, pullCount, currentDeck);
 
     for (var i = 0; i <= pullCount; i++) {
-      var meaning = book.checkBook(cards[i], currentDeck);
-      var imgPath = image.getImg(cards[i], currentDeck);
+      var meaning = book.checkBook(runes[i], currentDeck);
+      var symbol = emoji.getEmoji(runes[i], currentDeck);
+      var imgPath = image.getImg(runes[i], currentDeck);
       message.channel.send({embed: {
-        title: `Your rune at the ${handEmogi[i]} is ${cards[i]}.`,
+        title: `Your ${symbol} rune is ${runes[i]}.`,
         description: `Rune Meaning: ${meaning}`,
         image: {
           "url": `${imgPath}`

@@ -1,23 +1,26 @@
 //imports
-const config = require('../config/config.json');
+const config = require(`../config/config.json`);
+const emoji = require(`../functions/getEmoji.js`);
+const setup = require(`../img/runes/blankboard.json`);
 
-module.exports.runePlace = function (pullCount) {
-  var coordArray = [];
-  coordArray[0] = new Array ();
-  coordArray[1] = new Array ();
+module.exports.runePlace = function (message, runes, pullCount, currentDeck) {
+  //var runeGrid = JSON.parse(JSON.stringify(setup.template));
+  var runeGrid = [[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]],[[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"],[":black_large_square:"]]];
+  var symbol;
+
   for (var i = 0; i <= pullCount; i++) {
-    var xCoord = Math.floor(Math.random() * 14);
-    var yCoord = Math.floor(Math.random() * 14);
-    for (var z = 0; z <= coordArray[0].length; z++) {
-      if (xCoord == coordArray[0][i]) {
-        if (yCoord == coordArray[1][i]) {
-          i--;
-        } else {
-          coordArray[0].push(xCoord);
-          coordArray[1].push(yCoord);
-        }
-      }
+    var rCoord = Math.floor(Math.random() * 13);
+    console.log(rCoord);
+    var cCoord = Math.floor(Math.random() * 13);
+    console.log(cCoord);
+    if (runeGrid[rCoord][cCoord] == ":black_large_square:") {
+      symbol = emoji.getEmoji(runes[i], currentDeck);
+      runeGrid[rCoord][cCoord] = symbol;
+    } else {
+      i--;
     }
   }
-  return coordArray;
+  message.channel.send(`${runeGrid[0]}\n${runeGrid[1]}\n${runeGrid[2]}\n${runeGrid[3]}\n${runeGrid[4]}\n${runeGrid[5]}\n${runeGrid[6]}\n`);
+  message.channel.send(`${runeGrid[7]}\n${runeGrid[8]}\n${runeGrid[9]}\n${runeGrid[10]}\n${runeGrid[11]}\n${runeGrid[12]}`);
+  return runeGrid;
 }
