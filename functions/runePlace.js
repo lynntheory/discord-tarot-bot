@@ -5,7 +5,6 @@ const setup = require(`../img/runes/blankboard.json`);
 
 module.exports.runePlace = function (message, runes, pullCount, currentDeck) {
   var runeGrid = JSON.parse(JSON.stringify(setup.template));
-  var coordArray = JSON.parse(JSON.stringify(setup.coordArray));
   var symbol;
 
   for (var i = 0; i <= pullCount; i++) {
