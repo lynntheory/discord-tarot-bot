@@ -15,12 +15,12 @@ module.exports.runePlace = function (message, runes, pullCount, currentDeck) {
     console.log(cCoord);
     if (runeGrid[rCoord][cCoord] == ":black_large_square:") {
       symbol = emoji.getEmoji(runes[i], currentDeck);
-      runeGrid[rCoord][cCoord] == symbol;
+      runeGrid[rCoord][cCoord] == JSON.stringify(symbol);
     } else {
       i--;
     }
   }
   message.channel.send(`${runeGrid[0]}\n${runeGrid[1]}\n${runeGrid[2]}\n${runeGrid[3]}\n${runeGrid[4]}\n${runeGrid[5]}\n${runeGrid[6]}\n`);
-  message.channel.send(`${runeGrid[7]}\n${runeGrid[8]}\n${runeGrid[9]}\n${runeGrid[10]}\n${runeGrid[11]}\n${runeGrid[12]}\n${runeGrid[13]}`);
+  message.channel.send(`${runeGrid[7]}\n${runeGrid[8]}\n${runeGrid[9]}\n${runeGrid[10]}\n${runeGrid[11]}\n${runeGrid[12]}`);
   return runeGrid;
 }
