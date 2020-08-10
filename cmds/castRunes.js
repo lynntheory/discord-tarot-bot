@@ -13,7 +13,7 @@ async function castRunes (message, spread, currentDeck) {
     var hand = [];
     var pullCount = 8;
     var runes = mechanics.runePull(hand, pullCount, currentDeck);
-    coords.runePlace(message, runes, pullCount);
+    coords.runePlace(message, runes, pullCount, currentDeck);
 
     for (var i = 0; i <= pullCount; i++) {
       var meaning = book.checkBook(runes[i], currentDeck);
