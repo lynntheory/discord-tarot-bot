@@ -3,11 +3,11 @@ const config = require('../config/config.json');
 
 //load image files
 const riderwaite = require('../img/rider-waite/riderwaiteimg.json');
-//const runes = require('../img/runes/runesimg.json');
+const runes = require('../img/runes/runesimg.json');
 
 const imageFiles = {
   'Rider Waite': riderwaite
-  //'runes': runes
+  'Runes': runes
 }
 
 module.exports.getImg = function(card, currentDeck){
