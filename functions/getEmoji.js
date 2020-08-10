@@ -14,7 +14,7 @@ module.exports.getEmoji = function(card, currentDeck){
     var deckName = currentDeck.deck;
     if (imageFiles[deckName] != undefined) {
       var index = imageFiles[deckName];
-      imgPath = index[card];
+      imgPath = JSON.stringify(index[card]);
     } else {
       imgPath = ":white_large_square:";
     }
