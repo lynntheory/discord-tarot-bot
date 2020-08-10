@@ -16,10 +16,10 @@ module.exports.runePlace = function (message, runes, pullCount, currentDeck) {
       if ((rCoord == coordArray[0][i]) && (cCoord == coordArray[1][i])){
         i--;
       } else {
-        coordArray[0].push(rCoord);
-        coordArray[1].push(cCoord);
         var symbol = emoji.getEmoji(runes[i], currentDeck);
         runeGrid[rCoord][cCoord] = `${symbol}`;
+        coordArray[0].push(rCoord);
+        coordArray[1].push(cCoord);
       }
     }
   }
