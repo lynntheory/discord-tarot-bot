@@ -9,9 +9,9 @@ module.exports.runePlace = function (message, runes, pullCount, currentDeck) {
   var symbol;
 
   for (var i = 0; i <= pullCount; i++) {
-    var rCoord = Math.floor(Math.random() * 14);
+    var rCoord = Math.floor(Math.random() * 13);
     console.log(rCoord);
-    var cCoord = Math.floor(Math.random() * 14);
+    var cCoord = Math.floor(Math.random() * 13);
     console.log(cCoord);
     if (runeGrid[rCoord][cCoord] == ":black_large_square:") {
       symbol = emoji.getEmoji(runes[i], currentDeck);
