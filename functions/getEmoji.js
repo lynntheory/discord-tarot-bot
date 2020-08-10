@@ -10,15 +10,16 @@ const imageFiles = {
 
 module.exports.getEmoji = function(card, currentDeck){
   try{
-    var imgPath;
+    var emojiPath;
     var deckName = currentDeck.deck;
     if (imageFiles[deckName] != undefined) {
       var index = imageFiles[deckName];
-      imgPath = JSON.stringify(index[card]);
+      emojiPath = JSON.stringify(index[card]);
+      console.log(imgPath);
     } else {
-      imgPath = ":white_large_square:";
+      emojiPath = ":white_large_square:";
     }
-    return imgPath;
+    return emojiPath;
   } catch (err) {
     console.log(err);
   }
