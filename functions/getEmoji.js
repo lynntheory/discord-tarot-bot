@@ -8,7 +8,7 @@ const imageFiles = {
   'runes': runesemoji
 }
 
-module.exports.getImg = function(card, currentDeck){
+module.exports.getEmoji = function(card, currentDeck){
   try{
     var imgPath;
     var deckName = currentDeck.deck;
