@@ -6,7 +6,7 @@ const riderwaite = require('../img/rider-waite/riderwaiteimg.json');
 const runes = require('../img/runes/runesimg.json');
 
 const imageFiles = {
-  'Rider Waite': riderwaite
+  'Rider Waite': riderwaite,
   'Runes': runes
 }
 
