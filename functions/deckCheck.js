@@ -6,6 +6,7 @@ var fallback = config.defaultDeck;
 const riderwaite = require('../carddecks/riderwaite.json');
 const astrologian = require('../carddecks/astrologian.json');
 const runes = require('../carddecks/runes.json');
+const ogham = require('../carddecks/ogham.json');
 
 const decks = {
   'rw': riderwaite,
@@ -14,7 +15,8 @@ const decks = {
   'astro': astrologian,
   'ast': astrologian,
   'astrologian': astrologian,
-  'runes': runes
+  'runes': runes,
+  'ogham': ogham
 }
 
 module.exports.deckCheck = function(deck){
