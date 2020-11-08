@@ -13,10 +13,10 @@ async function pull (message, args) {
     let currentDeck = deck.deckCheck(args[2]);
     let itemLabel = currentDeck.itemLabel;
 
-    var spreadData;
-    spreadData = spreadInfo.getSpread(spread);
-    var positions = spreadData.positions;
-    var pullCount = spreadData.pullCount;
+    let spreadData;
+    spreadData = spreadInfo.getSpread(message, spreadData);
+    let positions = spreadData.positions;
+    let pullCount = spreadData.pullCount;
 
 
     var hand = [];
