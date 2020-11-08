@@ -26,7 +26,7 @@ module.exports.deckCheck = function(deck){
     currentDeck = decks[deck];
     return currentDeck;
   } else {
-    currentDeck = fallback;
+    currentDeck = decks[fallback];
     return currentDeck;
   }
 }
