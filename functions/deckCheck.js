@@ -15,7 +15,8 @@ const decks = {
   'astro': astrologian,
   'ast': astrologian,
   'astrologian': astrologian,
-  'runes': runes,
+  'futhark': futhark,
+  'runes': futhark,
   'ogham': ogham
 }
 
