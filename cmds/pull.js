@@ -5,6 +5,7 @@ const book = require('../functions/checkBook.js');
 const image = require('../functions/getImg.js');
 const mechanics = require('../functions/itemPull.js');
 const spreadInfo = require('../functions/getSpread.js');
+const deck = require('../functions/deckCheck.js');
 
 async function pull (message, args) {
   try{

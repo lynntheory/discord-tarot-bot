@@ -1,6 +1,5 @@
 //required files
 const config = require('../config/config.json');
-const deck = require('../functions/deckCheck.js');
 
 //commands import
 const pull = require('../cmds/pull.js');
