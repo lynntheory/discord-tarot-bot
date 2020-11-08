@@ -10,12 +10,11 @@ const deck = require('../functions/deckCheck.js');
 async function pull (message, args) {
   try{
     let spread = args[1];
-    console.log(spread);
     let currentDeck = deck.deckCheck(args[2]);
     let itemLabel = currentDeck.itemLabel;
 
     let spreadData;
-    spreadData = spreadInfo.getSpread(message, spreadData);
+    spreadData = spreadInfo.getSpread(message, spread, spreadData);
     let positions = spreadData.positions;
     let pullCount = spreadData.pullCount;
 
