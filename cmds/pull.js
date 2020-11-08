@@ -21,7 +21,7 @@ async function pull (message, args) {
 
     var hand = [];
     hand = mechanics.itemPull(hand, pullCount, currentDeck);
-    if (spread != "one"){
+    if (pullCount != 1){
       for (var i = 0; i <= pullCount; i++) {
         var meaning = book.checkBook(hand[i], currentDeck);
         var imgPath = image.getImg(hand[i], currentDeck);
