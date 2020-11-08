@@ -1,7 +1,9 @@
 {
   "deck": "Astrologian",
   "type": "tarot",
-  "cards": [
+  "itemLabel": "card",
+  "reversals": "yes",
+  "items": [
     "The Bole",
     "The Balance",
     "The Spire",

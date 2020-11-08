@@ -1,18 +1,18 @@
 //imports
 const config = require('../config/config.json');
-const spreads = require('../spreads/runespread.json');
 const book = require('../functions/checkBook.js');
 const image = require('../functions/getImg.js');
-const mechanics = require('../functions/runePull.js');
+const mechanics = require('../functions/itemPull.js');
 const coords = require('../functions/runePlace.js');
-const spreadInfo = require('../functions/getRuneSpread.js');
 const emoji = require('../functions/getEmoji.js');
 
-async function castRunes (message, spread, currentDeck) {
+const currentDeck = require('../carddecks/futhark.json');
+
+async function castRunes (message, args) {
   try{
     var hand = [];
-    var pullCount = 8;
-    var runes = mechanics.runePull(hand, pullCount, currentDeck);
+    let pullCount = 8;
+    let runes = mechanics.itemPull(hand, pullCount, currentDeck);
     coords.runePlace(message, runes, pullCount, currentDeck);
 
     for (var i = 0; i <= pullCount; i++) {

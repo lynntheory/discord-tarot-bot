@@ -1,7 +1,9 @@
 {
   "deck": "Rider Waite",
   "type": "tarot",
-  "cards": [
+  "itemLabel": "card",
+  "reversals": "yes",
+  "items": [
     "The Fool",
     "The Magician",
     "The High Priestess",

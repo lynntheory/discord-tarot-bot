@@ -1,7 +1,9 @@
 {
   "deck": "Greenwood",
   "type": "tarot",
-  "cards": [
+  "itemLabel": "card",
+  "reversals": "no",
+  "items": [
     "The Fool",
     "The Ancestor",
     "The Pole Star",
