@@ -7,14 +7,15 @@ const positionNames = ["first", "second", "third", "fourth", "fifth", "sixth", "
 
 module.exports.getSpread = function(message, spread, spreadData){
   try {
+    let parsed = parseInt(spread, 10);
     if (spreadIndex[spread] != undefined){
       spreadData = spreadIndex[spread];
       return spreadData;
-    } else if (typeof(spread) == 'number') {
-      if (spread > 1) {
-        pullCount = spread - 1;
+    } else if (parsed != 'NaN') {
+      if (parsed > 1) {
+        pullCount = parsed - 1;
       } else {
-        pullCount = spread;
+        pullCount = parsed;
       }
       spreadData = {
         "name": "Custom",
