@@ -5,7 +5,7 @@ const config = require('../config/config.json');
 const runesemoji = require('../img/runes/runesemoji.json');
 
 const imageFiles = {
-  'Runes': runesemoji
+  'futhark': runesemoji
 }
 
 module.exports.getEmoji = function(card, currentDeck){

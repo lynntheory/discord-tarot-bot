@@ -1,8 +1,13 @@
 {
   "one": {
-    "name": "One Card",
+    "name": "Pull One",
     "positions": "message",
     "pullCount": 1
+  },
+  "three": {
+    "name": "Action Plan",
+    "positions": ["problem or issue", "course of action", "outcome"],
+    "pullCount": 2
   },
   "time": {
     "name": "Time Spread",
@@ -10,22 +15,22 @@
     "pullCount": 2
   },
   "threeLove": {
-    "name": "Three Card Love",
+    "name": "Three Love",
     "positions": ["you", "partner", "dynamic"],
     "pullCount": 2
   },
   "fiveCard": {
-    "name": "Five Card",
+    "name": "Five Action Plan",
     "positions": ["preconceived idea", "the present", "the unexpected", "the near future", "the distant future"],
     "pullCount": 4
   },
   "fiveLove": {
-    "name": "Five Card Love",
+    "name": "Five Love",
     "positions": ["you and current issues", "past relationships/influences", "issues you need to address", "the areas you need to develop", "the likely outcome"],
     "pullCount": 4
   },
   "fiveRelationship": {
-    "name": "Five Card Relationship",
+    "name": "Five Relationship",
     "positions": ["your place/perspective", "partner place/perspective", "the foundation of relationship", "present state/issues", "likely outcome"],
     "pullCount": 4
   },

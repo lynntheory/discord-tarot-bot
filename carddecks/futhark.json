@@ -1,6 +1,9 @@
 {
-  "deck": "Runes",
-  "runes": [
+  "deck": "futhark",
+  "type": "runes",
+  "itemLabel": "rune",
+  "reversals": "yes",
+  "items": [
     "Fehu",
     "Uruz",
     "Thurisaz",

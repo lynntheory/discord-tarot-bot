@@ -1,6 +1,9 @@
 {
   "deck": "Ogham",
-  "runes": [
+  "type": "runes",
+  "itemLabel": "rune",
+  "reversals": "no",
+  "items": [
     "Beith",
     "Luis",
     "Fearn",
