@@ -21,13 +21,12 @@ async function pull (message, args) {
 
     var hand = [];
     hand = mechanics.itemPull(hand, pullCount, currentDeck);
-    if (spread != "one"){
+    if (pullCount != 1){
       for (var i = 0; i <= pullCount; i++) {
         var meaning = book.checkBook(hand[i], currentDeck);
         var imgPath = image.getImg(hand[i], currentDeck);
-        //change terms for rune vs cards
           message.channel.send({embed: {
-            title: `Your ${itemLabel} for the ${positions[i]} is ${hand[i]}.`,
+            title: `The ${positions[i]} ${itemLabel} is ${hand[i]}.`,
             description: `Meaning: ${meaning}`,
             image: {
               "url": `${imgPath}`
