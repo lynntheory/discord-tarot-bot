@@ -20,7 +20,7 @@ async function castRunes (message, args) {
       var symbol = emoji.getEmoji(runes[i], currentDeck);
       var imgPath = image.getImg(runes[i], currentDeck);
       message.channel.send({embed: {
-        title: `Your ${symbol} rune is ${runes[i]}.`,
+        title: `The ${symbol} rune is ${runes[i]}.`,
         description: `Rune Meaning: ${meaning}`,
         image: {
           "url": `${imgPath}`
