@@ -1,5 +1,6 @@
 {
-  "deck": "Runes",
+  "deck": "futhark",
+  "type": "runes",
   "runes": [
     "Fehu",
     "Uruz",

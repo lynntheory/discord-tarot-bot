@@ -21,9 +21,7 @@ const commands = {
 module.exports.check = function(message) {
   let args = message.content.slice(config.Prefix.length).split(" ");
   if (commands[args[0]] != undefined) {
-    var spread = args[1];
-    var currentDeck = deck.deckCheck(args[2]);
-    return commands[args[0]](message, spread, currentDeck);
+    return commands[args[0]](message, args);
   } else {
     message.reply('This command does not exist!');
     return;
