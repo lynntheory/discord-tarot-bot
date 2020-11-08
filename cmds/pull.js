@@ -35,11 +35,11 @@ async function pull (message, args) {
           }})
         }}
     else {
-      var meaning = book.checkBook(cards[0], currentDeck);
-      var imgPath = image.getImg(cards[0], currentDeck);
+      var meaning = book.checkBook(hand[0], currentDeck);
+      var imgPath = image.getImg(hand[0], currentDeck);
       message.channel.send({embed: {
-        title: `Your card is ${cards[0]}.`,
-        description: `Card Meaning: ${meaning}`,
+        title: `Your ${itemLabel} is ${hand[0]}.`,
+        description: `Meaning: ${meaning}`,
         image: {
           "url": `${imgPath}`
         }
