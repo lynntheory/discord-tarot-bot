@@ -1,7 +1,7 @@
 //imports
 const config = require('../config/config.json');
 
-module.exports.logReading(message, args, spread, currentDeck, hand){
+module.exports.logReading(args, spread, currentDeck, hand){
   //Command model: ^pull spread deck n name Note text goes here
   //remove leading args
   let notesArr = args.splice(0, 3);
@@ -18,7 +18,7 @@ module.exports.logReading(message, args, spread, currentDeck, hand){
   let notes = notesArr.join(" "); //What if no note added?
   //turn hand from array into symbol delimited String
   let cards = hand.join();
-  
+
   //create Date mm/dd/year
   let d = new Date();
   let dateArr = [(d.getMonth() + 1), d.getDate(), d.getFullYear()];

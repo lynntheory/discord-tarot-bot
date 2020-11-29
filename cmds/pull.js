@@ -24,7 +24,7 @@ async function pull (message, args) {
 
     // Opt out of logging
     if (!message.content.contains(/logOff/i)) {
-      history.logReading(message, args, spread, currentDeck, hand);
+      history.logReading(args, spread, currentDeck, hand);
     }
 
     if (pullCount != 1){
