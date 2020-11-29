@@ -18,8 +18,11 @@ module.exports.logReading(message, args, spread, currentDeck, hand){
   let notes = notesArr.join(" "); //What if no note added?
   //turn hand from array into symbol delimited String
   let cards = hand.join();
-  //create Date
-
+  
+  //create Date mm/dd/year
+  let d = new Date();
+  let dateArr = [(d.getMonth() + 1), d.getDate(), d.getFullYear()];
+  let date = dateArr.join("/");
 
   //actually put together and save
   var reading = Log.build({
