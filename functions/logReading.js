@@ -1,7 +1,7 @@
 //imports
 const config = require('../config/config.json');
 
-module.exports.logReading(args, spread, currentDeck, hand){
+module.exports.logReading = function(args, spread, currentDeck, hand){
   //Command model: ^pull spread deck n name Note text goes here
   //remove leading args
   let notesArr = args.splice(0, 3);
