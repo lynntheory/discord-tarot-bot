@@ -6,6 +6,7 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/itemPull.js');
 const spreadInfo = require('../functions/getSpread.js');
 const deck = require('../functions/deckCheck.js');
+const history = require('../functions/logReading.js');
 
 async function pull (message, args) {
   try{
@@ -18,9 +19,11 @@ async function pull (message, args) {
     let positions = spreadData.positions;
     let pullCount = spreadData.pullCount;
 
-
     var hand = [];
     hand = mechanics.itemPull(hand, pullCount, currentDeck);
+
+    history.logReading(message, args, spread, currentDeck, hand);
+    
     if (pullCount != 1){
       for (var i = 0; i <= pullCount; i++) {
         var meaning = book.checkBook(hand[i], currentDeck);
