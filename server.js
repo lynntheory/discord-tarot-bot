@@ -12,10 +12,7 @@ const cmds = require('./functions/index.js');
 
 //sql imports/setup
 const { Sequelize } = require('sequelize');
-const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'postgres'
-});
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 
 try {
   await sequelize.authenticate();
