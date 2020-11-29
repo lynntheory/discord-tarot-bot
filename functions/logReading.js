@@ -33,5 +33,5 @@ module.exports.logReading = function(args, spread, currentDeck, hand){
     name: name,
     notes: notes
   });
-  await reading.save();
+  reading.save();
 }
