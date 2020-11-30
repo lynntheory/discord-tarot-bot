@@ -21,21 +21,6 @@ try {
   console.error('Unable to connect to the database:', error);
 }
 
-const Log = sequelize.define('Log', {
-  readingID: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  date: DataTypes.STRING,
-  spread: DataTypes.STRING,
-  deck: DataTypes.STRING,
-  cards: DataTypes.STRING,
-  name: DataTypes.STRING ,
-  notes: DataTypes.STRING
-});
-
 //cup of coffee
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -52,7 +37,6 @@ client.on('ready', () => {
   const presence = "for messages";
   client.user.setActivity(presence, { type: 'WATCHING' });
   //initiate Log if not already there
-  Log.sync();
 });
 
 client.on('message', async (message) =>{
