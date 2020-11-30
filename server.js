@@ -11,7 +11,7 @@ const cmds = require('./functions/index.js');
 
 
 //sql imports/setup
-const { Sequelize } = require('sequelize');
+const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 
 try {
@@ -22,12 +22,12 @@ try {
 }
 
 const Log = sequelize.define('Log', {
-  //readingID: {
-  //  type: DateTypes.INTERGER,
-  //  allowNull: false,
-  //  primaryKey: true,
-  //  autoIncrement: true
-  //},
+  readingID: {
+    type: DateTypes.INTERGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true
+  },
   date: DateTypes.STRING,
   spread: DateTypes.STRING,
   deck: DateTypes.STRING,
