@@ -22,7 +22,12 @@ try {
 }
 
 const Log = sequelize.define('Log', {
-  readingID: { primaryKey: true },
+  readingID: {
+    type: DateTypes.INTERGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true
+  },
   date: { type: DateTypes.STRING },
   spread: { type: DateTypes.STRING },
   deck: { type: DateTypes.STRING },
