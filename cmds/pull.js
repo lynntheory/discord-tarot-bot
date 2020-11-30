@@ -23,7 +23,7 @@ async function pull (message, args) {
     hand = mechanics.itemPull(hand, pullCount, currentDeck);
 
     // Opt out of logging
-    if (!message.content.contains(/logOff/i)) {
+    if (!message.content.match(/logOff/i)) {
       history.logReading(args, spread, currentDeck, hand);
     }
 
