@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "discord.js": "^11.5.1"
+    "discord.js": "^11.5.1",
+    "sequelize": "^6.3.5",
+    "pg": "^8.5.1"
   },
   "engines": {
     "node": "8.x"
