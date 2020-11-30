@@ -23,7 +23,7 @@ try {
 
 const Log = sequelize.define('Log', {
   readingID: {
-    type: DataTypes.INTERGER,
+    type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true
