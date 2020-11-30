@@ -23,12 +23,12 @@ try {
 
 const Log = sequelize.define('Log', {
   readingID: { primaryKey: true },
-  date: DateTypes.STRING,
-  spread: DateTypes.STRING,
-  deck: DateTypes.STRING,
-  cards: DateTypes.STRING,
-  name: DateTypes.STRING,
-  notes: DateTypes.STRING
+  date: { type: DateTypes.STRING },
+  spread: { type: DateTypes.STRING },
+  deck: { type: DateTypes.STRING },
+  cards: { type: DateTypes.STRING },
+  name: { type: DateTypes.STRING },
+  notes: { type: DateTypes.STRING }
 });
 
 //cup of coffee
