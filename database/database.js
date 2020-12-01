@@ -64,3 +64,7 @@ module.exports.logReading = function(args, spread, hand){
   });
   reading.save();
 }
+
+module.exports.searchDB = function(args){
+    
+}
