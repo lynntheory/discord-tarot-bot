@@ -1,4 +1,5 @@
 //imports
+const { Sequelize, Model, DataTypes } = require('sequelize');
 const config = require('../config/config.json');
 
 const Log = sequelize.define('Log', {

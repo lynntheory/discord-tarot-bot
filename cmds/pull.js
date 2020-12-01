@@ -6,7 +6,7 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/itemPull.js');
 const spreadInfo = require('../functions/getSpread.js');
 const deck = require('../functions/deckCheck.js');
-const history = require('../functions/logReading.js');
+const history = require('../database/database.js');
 
 async function pull (message, args) {
   try{
