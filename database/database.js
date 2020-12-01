@@ -55,7 +55,7 @@ module.exports.logReading = function(args, spread, currentDeck, hand){
   var reading = Log.build({
     date: date,
     spread: spread,
-    deck: deck,
+    deck: currentDeck,
     cards: cards,
     name: name,
     notes: notes
