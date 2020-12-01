@@ -28,8 +28,10 @@ module.exports.connect = function(){
   }
 }
 
-module.exports.logReading = function(args, spread, currentDeck, hand){
+module.exports.logReading = function(args, spread, hand){
   //Command model: ^pull spread deck n name Note text goes here
+  //retrieve deck
+  let deck = args[2];
   //remove leading args
   let notesArr = args.splice(0, 3);
 
@@ -44,7 +46,7 @@ module.exports.logReading = function(args, spread, currentDeck, hand){
   //parse note text for String
   let notes = notesArr.join(" "); //What if no note added?
   //turn hand from array into symbol delimited String
-  let cards = JSON.stringify(hand.join());
+  let cards = hand.join();
 
   //create Date mm/dd/year
   let d = new Date();
@@ -55,7 +57,7 @@ module.exports.logReading = function(args, spread, currentDeck, hand){
   var reading = Log.build({
     date: date,
     spread: spread,
-    deck: currentDeck,
+    deck: deck,
     cards: cards,
     name: name,
     notes: notes
