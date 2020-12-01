@@ -6,7 +6,7 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/itemPull.js');
 const spreadInfo = require('../functions/getSpread.js');
 const deck = require('../functions/deckCheck.js');
-const history = require('../database/database.js');
+const db = require('../database/database.js');
 
 async function pull (message, args) {
   try{
@@ -24,7 +24,7 @@ async function pull (message, args) {
 
     // Opt out of logging
     if (!message.content.match(/logOff/i)) {
-      history.logReading(args, spread, currentDeck, hand);
+      db.logReading(args, spread, currentDeck, hand);
     }
 
     if (pullCount != 1){

@@ -8,18 +8,7 @@ const client = new Discord.Client();
 //internal imports
 const config = require('./config/config.json');
 const cmds = require('./functions/index.js');
-
-
-//sql imports/setup
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE_URL);
-
-try {
-  sequelize.authenticate();
-  console.log('Connection has been established successfully.');
-} catch (error) {
-  console.error('Unable to connect to the database:', error);
-}
+const db = require('./database/database.js');
 
 //cup of coffee
 const PORT = process.env.PORT || 3000;
@@ -36,7 +25,7 @@ client.on('ready', () => {
   //set activity presence for bot
   const presence = "for messages";
   client.user.setActivity(presence, { type: 'WATCHING' });
-  //initiate Log if not already there
+  db.connect();
 });
 
 client.on('message', async (message) =>{

@@ -1,5 +1,6 @@
 //imports
 const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
 
 const Log = sequelize.define('Log', {
@@ -17,10 +18,18 @@ const Log = sequelize.define('Log', {
   notes: DataTypes.STRING
 });
 
+module.exports.connect = function(){
+  try {
+    sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+    Log.sync();
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+}
+
 module.exports.logReading = function(args, spread, currentDeck, hand){
   //Command model: ^pull spread deck n name Note text goes here
-  Log.sync();
-
   //remove leading args
   let notesArr = args.splice(0, 3);
 
