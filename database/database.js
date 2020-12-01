@@ -46,7 +46,7 @@ module.exports.logReading = function(args, spread, hand){
   //parse note text for String
   let notes = notesArr.join(" "); //What if no note added?
   //turn hand from array into symbol delimited String
-  let cards = hand.join(",");
+  let cards = hand.join();
 
   //create Date mm/dd/year
   let d = new Date();

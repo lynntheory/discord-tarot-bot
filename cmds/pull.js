@@ -24,7 +24,7 @@ async function pull (message, args) {
 
     // Opt out of logging
     if (!message.content.match(/logOff/i)) {
-      db.logReading(args, spread, currentDeck, hand);
+      db.logReading(args, spread, hand);
     }
 
     if (pullCount != 1){
