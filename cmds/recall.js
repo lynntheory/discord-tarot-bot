@@ -10,13 +10,13 @@ async function recall (message, args) {
     while (args.length){
       switch (args[0]):
         case 'name' || 'Name':
-          queryString = queryString.concat('name =');
+          queryString = queryString.concat('name = ');
           break;
         case 'date' || 'Date':
-          queryString = queryString.concat('date =');
+          queryString = queryString.concat('date = ');
           break;
         case 'note' || 'Note':
-          queryString = queryString.concat('note =');
+          queryString = queryString.concat('note = ');
           break;
         default:
           break;
