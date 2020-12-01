@@ -27,7 +27,8 @@ async function recall (message, args) {
         queryString = queryString.concat(" AND ");
       }
     }
-    db.searchDB(queryString);
+    db.searchDB(message, queryString);
+    return;
   } catch (err) {
     console.log(err);
   }
