@@ -22,7 +22,7 @@ async function recall (message, args) {
           break;
       }
       args.shift();
-      [searchParam,args] = textParser(args);
+      [searchParam, args] = textParser(args);
       queryString = queryString.concat(searchParam);
       if (args.length) {
         queryString = queryString.concat(" AND ");
@@ -38,5 +38,10 @@ async function recall (message, args) {
 module.exports = recall;
 
 function textParser (args) {
-
+  while(args[0] != 'name' || 'Name' || 'date' || 'Date' || 'note' || 'Note'|| null) {
+    let word = args[0];
+    let string = string.concat(word);
+    args.shift();
+  }
+  return string, args;
 }
