@@ -38,9 +38,10 @@ async function recall (message, args) {
 module.exports = recall;
 
 function textParser (args) {
+  let string = '';
   while(args[0] != 'name' || 'Name' || 'date' || 'Date' || 'note' || 'Note'|| null) {
     let word = args[0];
-    let string = string.concat(word);
+    string = string.concat(word);
     args.shift();
   }
   return string, args;
