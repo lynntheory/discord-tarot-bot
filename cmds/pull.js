@@ -21,8 +21,8 @@ async function pull (message, args) {
 
     var hand = [];
     hand = mechanics.itemPull(hand, pullCount, currentDeck);
-    if (pullCount != 1){
-      for (var i = 0; i <= pullCount; i++) {
+    //if (pullCount != 1){
+      for (var i = 0; i < pullCount; i++) {
         var meaning = book.checkBook(hand[i], currentDeck);
         var imgPath = image.getImg(hand[i], currentDeck);
           message.channel.send({embed: {
@@ -33,7 +33,7 @@ async function pull (message, args) {
             }
           }})
         }}
-    else {
+     /*else {
       var meaning = book.checkBook(hand[0], currentDeck);
       var imgPath = image.getImg(hand[0], currentDeck);
       message.channel.send({embed: {
@@ -43,7 +43,7 @@ async function pull (message, args) {
           "url": `${imgPath}`
         }
       }})
-    }
+    }*/
   } catch (err) {
     console.log(err);
   }

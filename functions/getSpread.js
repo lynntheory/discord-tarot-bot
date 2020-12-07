@@ -12,11 +12,11 @@ module.exports.getSpread = function(message, spread, spreadData){
       spreadData = spreadIndex[spread];
       return spreadData;
     } else if (parsed != 'NaN') {
-      if (parsed > 1) {
+      /*if (parsed > 1) {
         pullCount = parsed - 1;
-      } else {
+      } else {*/
         pullCount = parsed;
-      }
+      //}
       spreadData = {
         "name": "Custom",
         "positions": positionNames,
