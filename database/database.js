@@ -1,5 +1,4 @@
 //imports
-const Discord = require('discord.js');
 const { Sequelize, Model, DataTypes, QueryTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
@@ -76,10 +75,8 @@ async function makeQueryResult (queryString) {
   console.log(results);
   let resCount = results.length;
   console.log(results.length);
-  const formattedResult = new Discord.MessageEmbed();
-  formattedResult.setTitle('Query Results');
-  formattedResult.setDescription(`There are ${resCount} results.`);
-  let ittID, ittNote, ittDate, ittName, ittCards;
+  var formattedResult = `Query Results: There are ${resCount} results.`;
+  let ittID, ittNote, ittDate, ittName, ittCards, ittString;
   for (let i = 0; i<=resCount; i++) {
     console.log(results[i]);
     ittID = results[i]['readingID'];
@@ -87,10 +84,8 @@ async function makeQueryResult (queryString) {
     ittDate = results[i]['date'];
     ittName = results[i]['name'];
     ittCards = results[i]['cards'];
-    console.log(`Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`)
-    formattedResult.addField(`Result`, `Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`);
+    ittString = ` Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`;
+    formattedResult = formattedResult.concat(ittString);
   }
-  console.log(formattedResult);
-
-  return await results;
+  return await formattedResult;
 }
