@@ -37,7 +37,7 @@ module.exports.logReading = function(args, spread, hand){
 
   //read for name in args list
   let name;
-  if (notesArr[0] == "n") {
+  if (notesArr[0] == "n" || "name" || "Name") {
     name = notesArr[1];
     notesArr = notesArr.splice(0,2);
   } else {
