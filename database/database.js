@@ -80,9 +80,9 @@ async function makeQueryResult (queryString) {
   formattedResult.setDescription(`There are ${resCount} results.`);
   let currResult;
   for (let i = 0; i<=resCount; i++) {
-    currResult = results[i];
-    console.log(results[i]);
-    formattedResult.addFields({ name: `Reading ID ${results[i][0]}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
+    //currResult = results[i];
+    //console.log(results[i]);
+    formattedResult.addFields({ name: `Reading ID ${results[i][0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
   }
   console.log(formattedResult);
   return await formattedResult;
