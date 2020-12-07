@@ -70,8 +70,8 @@ module.exports.searchDB = function(queryString){
     let results = makeQuery(queryString);
     let resCount = results.Result.rowCount;
     const formattedResult = new Discord.MessageEmbed();
-      .setTitle('Query Results')
-      .setDescription(`There are ${resCount} results.`)
+    formattedResult.setTitle('Query Results');
+    formattedResult.setDescription(`There are ${resCount} results.`);
     for (let i = 0; i<=resCount; i++) {
       let currResult = results[0][i];
       formattedResult.addFields({ name: `Result ${i}`, value: `${currResult.notes} Reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
