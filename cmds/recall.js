@@ -27,7 +27,7 @@ async function recall (message, args) {
     queryString = queryString.concat(args.join());
     console.log(queryString);
     let formattedResult = await db.searchDB(queryString);
-    message.channel.send(`\`\`\`${formattedResult}\`\`\``);
+    message.channel.send(formattedResult);
     return;
   } catch (err) {
     console.log(err);

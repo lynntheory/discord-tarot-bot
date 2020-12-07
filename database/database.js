@@ -74,20 +74,23 @@ module.exports.searchDB = function(queryString){
 async function makeQueryResult (queryString) {
   var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT, raw: TRUE });
   console.log(results);
-  /*
   let resCount = results.length;
   console.log(results.length);
   const formattedResult = new Discord.MessageEmbed();
   formattedResult.setTitle('Query Results');
   formattedResult.setDescription(`There are ${resCount} results.`);
-  var currResult;
+  let ittID, ittNote, ittDate, ittName, ittCards;
   for (let i = 0; i<=resCount; i++) {
-    currResult = results[i];
-    console.log(currResult);
-    await formattedResult.addField(`Reading ID ${currResult[0]}`, `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`);
-    console.log (`itteration ${i}`);
+    console.log(results[i]);
+    ittID = results[i]['readingID'];
+    ittNote = results[i]['note'];
+    ittDate = results[i]['date'];
+    ittName = results[i]['name'];
+    ittCards = results[i]['cards'];
+    console.log(`Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`)
+    await formattedResult.addField(`Reading ID ${ittID}`, `${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`);
   }
   console.log(formattedResult);
-  */
+
   return await results;
 }
