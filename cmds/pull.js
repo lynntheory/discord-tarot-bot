@@ -32,7 +32,7 @@ async function pull (message, args) {
               "url": `${imgPath}`
             }
           }})
-        }}
+        }//}
      /*else {
       var meaning = book.checkBook(hand[0], currentDeck);
       var imgPath = image.getImg(hand[0], currentDeck);
