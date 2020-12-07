@@ -66,7 +66,7 @@ module.exports.logReading = function(args, spread, hand){
 }
 
 module.exports.searchDB = function(queryString){
-    let formattedResult = makeQueryResult(queryString);
+    var formattedResult = makeQueryResult(queryString);
     console.log(formattedResult);
     return formattedResult;
 }
@@ -90,5 +90,6 @@ async function makeQueryResult (queryString) {
     console.log(ittString);
     formattedResult = formattedResult.concat(ittString);
   }
+  console.log(formattedResult);
   return formattedResult;
 }
