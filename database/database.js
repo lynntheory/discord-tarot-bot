@@ -76,6 +76,7 @@ async function makeQueryResult (queryString) {
   let resCount = results.length;
   console.log(results.length);
   var formattedResult = `Query Results: There are ${resCount} results.`;
+  console.log(formattedResult);
   let ittID, ittNote, ittDate, ittName, ittCards, ittString;
   for (let i = 0; i<=resCount; i++) {
     console.log(results[i]);
@@ -85,6 +86,7 @@ async function makeQueryResult (queryString) {
     ittName = results[i]['name'];
     ittCards = results[i]['cards'];
     ittString = ` Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`;
+    console.log(ittString);
     formattedResult = formattedResult.concat(ittString);
   }
   return await formattedResult;
