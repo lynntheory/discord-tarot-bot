@@ -24,12 +24,13 @@ async function pull (message, args) {
     for (var i = 0; i < pullCount; i++) {
       var meaning = book.checkBook(hand[i], currentDeck);
       var imgPath = image.getImg(hand[i], currentDeck);
-        message.channel.send({embed: {
-          title: `The ${positions[i]} ${itemLabel} is ${hand[i]}.`,
-          description: `Meaning: ${meaning}`,
-          image: {
-            "url": `${imgPath}`
-          }
+      if (pullcount = 1) {positionName = "pulled"} else {positions[i]};
+      message.channel.send({embed: {
+        title: `The ${positionName} ${itemLabel} is ${hand[i]}.`,
+        description: `Meaning: ${meaning}`,
+        image: {
+          "url": `${imgPath}`
+        }
       }})
     }
   } catch (err) {
