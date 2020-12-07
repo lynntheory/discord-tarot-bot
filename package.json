@@ -1,6 +1,6 @@
 {
   "name": "discord-tarot-bot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "pg": "^8.5.1"
   },
   "engines": {
-    "node": "8.x"
+    "node": "12.x"
   },
   "repository": {
     "url": ""
