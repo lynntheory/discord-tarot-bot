@@ -7,27 +7,22 @@ async function recall (message, args) {
     var queryString = "SELECT * FROM Logs WHERE ";
     let searchParam;
     args.shift();
-    while (args.length){
-      switch (args[0]){
-        case 'name' || 'Name':
-          queryString = queryString.concat('name = ');
-          break;
-        case 'date' || 'Date':
-          queryString = queryString.concat('date = ');
-          break;
-        case 'note' || 'Note':
-          queryString = queryString.concat('note = ');
-          break;
-        default:
-          break;
-      }
-      args.shift();
-      [searchParam, args] = textParser(args);
-      queryString = queryString.concat(searchParam);
-      if (args.length) {
-        queryString = queryString.concat(" AND ");
-      }
+    switch (args[0]){
+      case 'name' || 'Name':
+        queryString = queryString.concat('name = ');
+        break;
+      case 'date' || 'Date':
+        queryString = queryString.concat('date = ');
+        break;
+      case 'note' || 'Note':
+        queryString = queryString.concat('note = ');
+        break;
+      default:
+        break;
     }
+    args.shift();
+    queryString = queryString.concat(args.join());
+    console.log(queryString);
     db.searchDB(message, queryString);
     return;
   } catch (err) {
@@ -36,13 +31,3 @@ async function recall (message, args) {
 }
 
 module.exports = recall;
-
-function textParser (args) {
-  let string = '';
-  while(args[0] != 'name' || 'Name' || 'date' || 'Date' || 'note' || 'Note'|| null) {
-    let word = args[0];
-    string = string.concat(word);
-    args.shift();
-  }
-  return string, args;
-}
