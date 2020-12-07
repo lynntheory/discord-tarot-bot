@@ -1,4 +1,5 @@
 //imports
+const Discord = require('discord.js');
 const config = require('../config/config.json');
 const db = require('../database/database.js');
 
@@ -25,7 +26,8 @@ async function recall (message, args) {
     args.shift();
     queryString = queryString.concat(args.join());
     console.log(queryString);
-    db.searchDB(message, queryString);
+    let formattedResult = await db.searchDB(queryString);
+    message.channel.send(formattedResult);
     return;
   } catch (err) {
     console.log(err);

@@ -1,4 +1,5 @@
 //imports
+const Discord = require('discord.js');
 const { Sequelize, Model, DataTypes, QueryTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
@@ -65,12 +66,21 @@ module.exports.logReading = function(args, spread, hand){
   reading.save();
 }
 
-module.exports.searchDB = function(message, queryString){
-    searchSkin(queryString);
-    message.reply(results);
+module.exports.searchDB = function(queryString){
+    let results = makeQuery(queryString);
+    let resCount = results.Result.rowCount;
+    const formattedResult = new Discord.MessageEmbed();
+      .setTitle('Query Results')
+      .setDescription(`There are ${resCount} results.`)
+    for (let i = 0; i<=resCount; i++) {
+      let currResult = results[0][i];
+      formattedResult.addFields({ name: `Result ${i}`, value: `${currResult.notes} Reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
+    }
+    console.log(formattedResult);
+    return formattedResult;
 }
 
-async function searchSkin (queryString) {
+async function makeQuery (queryString) {
   const results = await sequelize.query(queryString);
   console.log(results);
   return results;
