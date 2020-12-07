@@ -65,9 +65,11 @@ module.exports.logReading = function(args, spread, hand){
   reading.save();
 }
 
-module.exports.searchDB = function(message, queryString){
+async function searchDB = function(message, queryString){
     const results = await sequelize.query(queryString);
     console.log(results);
     //console.log(metadata);
     message.reply(results);
 }
+
+module.exports = searchDB;
