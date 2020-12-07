@@ -67,21 +67,21 @@ module.exports.logReading = function(args, spread, hand){
 }
 
 module.exports.searchDB = function(queryString){
-    let results = makeQuery(queryString);
-    let resCount = results.length;
-    const formattedResult = new Discord.MessageEmbed();
-    formattedResult.setTitle('Query Results');
-    formattedResult.setDescription(`There are ${resCount} results.`);
-    for (let i = 0; i<=resCount; i++) {
-      let currResult = results[i];
-      formattedResult.addFields({ name: `Reading ID ${currResult.readingID}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
-    }
-    console.log(formattedResult);
+    let formattedResult = makeQueryResult(queryString);
     return formattedResult;
 }
 
-async function makeQuery (queryString) {
+async function makeQueryResult (queryString) {
   const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT });
   console.log(results);
-  return results;
+  let resCount = results.length;
+  const formattedResult = new Discord.MessageEmbed();
+  formattedResult.setTitle('Query Results');
+  formattedResult.setDescription(`There are ${resCount} results.`);
+  for (let i = 0; i<=resCount; i++) {
+    let currResult = results[i];
+    formattedResult.addFields({ name: `Reading ID ${currResult.readingID}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
+  }
+  console.log(formattedResult);
+  return await formattedResult;
 }
