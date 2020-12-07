@@ -81,7 +81,7 @@ module.exports.searchDB = function(queryString){
 }
 
 async function makeQuery (queryString) {
-  const results = await sequelize.query(queryString);
+  const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT });
   console.log(results);
   return results;
 }
