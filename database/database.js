@@ -68,13 +68,13 @@ module.exports.logReading = function(args, spread, hand){
 
 module.exports.searchDB = function(queryString){
     let results = makeQuery(queryString);
-    let resCount = results.Result.rowCount;
+    let resCount = results.length();
     const formattedResult = new Discord.MessageEmbed();
     formattedResult.setTitle('Query Results');
     formattedResult.setDescription(`There are ${resCount} results.`);
     for (let i = 0; i<=resCount; i++) {
-      let currResult = results[0][i];
-      formattedResult.addFields({ name: `Result ${i}`, value: `${currResult.notes} Reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
+      let currResult = results[i];
+      formattedResult.addFields({ name: `Reading ID ${currResult.readingID}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
     }
     console.log(formattedResult);
     return formattedResult;
