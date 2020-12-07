@@ -79,7 +79,7 @@ async function makeQueryResult (queryString) {
   formattedResult.setTitle('Query Results');
   formattedResult.setDescription(`There are ${resCount} results.`);
   for (let i = 0; i<=resCount; i++) {
-    let currResult = results[i];
+    let currResult = JSON.parse(JSON.stringify(results[i]));
     formattedResult.addFields({ name: `Reading ID ${currResult.readingID}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
   }
   console.log(formattedResult);
