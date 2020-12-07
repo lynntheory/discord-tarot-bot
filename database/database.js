@@ -72,7 +72,7 @@ module.exports.searchDB = function(queryString){
 }
 
 async function makeQueryResult (queryString) {
-  var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT});
+  var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT, raw: TRUE });
   console.log(results);
   /*
   let resCount = results.length;
