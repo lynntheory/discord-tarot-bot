@@ -79,7 +79,7 @@ async function makeQueryResult (queryString) {
   const formattedResult = new Discord.MessageEmbed();
   formattedResult.setTitle('Query Results');
   formattedResult.setDescription(`There are ${resCount} results.`);
-  let currResult;
+  var currResult;
   for (let i = 0; i<=resCount; i++) {
     currResult = results[i];
     console.log(currResult);
