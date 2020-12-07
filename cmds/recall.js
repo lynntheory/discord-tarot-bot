@@ -4,7 +4,7 @@ const db = require('../database/database.js');
 
 async function recall (message, args) {
   try{
-    var queryString = "SELECT * FROM Logs WHERE ";
+    var queryString = "SELECT * FROM logs WHERE ";
     let searchParam;
     args.shift();
     switch (args[0]){

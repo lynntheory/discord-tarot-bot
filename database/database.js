@@ -3,7 +3,7 @@ const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
 
-const Log = sequelize.define('Log', {
+const Log = sequelize.define('log', {
   readingID: {
     type: DataTypes.INTEGER,
     allowNull: false,
