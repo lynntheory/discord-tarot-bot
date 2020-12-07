@@ -7,76 +7,76 @@
   "three": {
     "name": "Action Plan",
     "positions": ["problem or issue", "course of action", "outcome"],
-    "pullCount": 2
+    "pullCount": 3
   },
   "time": {
     "name": "Time Spread",
     "positions": ["past", "present", "future"],
-    "pullCount": 2
+    "pullCount": 3
   },
   "threeLove": {
     "name": "Three Love",
     "positions": ["you", "partner", "dynamic"],
-    "pullCount": 2
+    "pullCount": 3
   },
   "fiveCard": {
     "name": "Five Action Plan",
     "positions": ["preconceived idea", "the present", "the unexpected", "the near future", "the distant future"],
-    "pullCount": 4
+    "pullCount": 5
   },
   "fiveLove": {
     "name": "Five Love",
     "positions": ["you and current issues", "past relationships/influences", "issues you need to address", "the areas you need to develop", "the likely outcome"],
-    "pullCount": 4
+    "pullCount": 5
   },
   "fiveRelationship": {
     "name": "Five Relationship",
     "positions": ["your place/perspective", "partner place/perspective", "the foundation of relationship", "present state/issues", "likely outcome"],
-    "pullCount": 4
+    "pullCount": 5
   },
   "compatibility": {
     "name": "Compatibility",
     "positions": ["your wants in relationship", "their wants in relationship", "your differences", "your similarities", "emotional compatibility", "physical compatibility", "mental compatibility"],
-    "pullCount": 6
+    "pullCount": 7
   },
   "crossSpread": {
     "name": "Seer Cross",
     "positions": ["situation", "challenge", "known", "unknown", "past", "future", "how you see you", "how others see you", "hopes and fears", "outcome"],
-    "pullCount": 9
+    "pullCount": 10
   },
   "guideSpread": {
     "name": "Guidance Spread",
     "positions": ["present", "problem", "change", "strengths", "weaknesses", "best outcome"],
-    "pullCount": 5
+    "pullCount": 6
   },
   "sevenDay": {
     "name": "Seven Day Outlook",
     "positions": ["today", "tomorrow", "day 3", "day 4", "day 5", "day 6", "day 7", "week overall"],
-    "pullCount": 7
+    "pullCount": 8
   },
   "sixMonth": {
     "name": "Six Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "overall"],
-    "pullCount": 6
+    "pullCount": 7
   },
   "twelveMonth": {
     "name": "Twelve Month Outlook",
     "positions": ["current", "month 2", "month 3", "month 4", "month 5", "month 6", "month 7", "month 8", "month 9", "month 10", "month 11", "month 12", "overall"],
-    "pullCount": 12
+    "pullCount": 13
   },
   "busStrat": {
     "name": "Business Strategy",
     "positions": ["current situation", "current challenged", "where to find help", "long term gains", "short term gains", "strengths", "weaknesses", "what to focus on now", "what to focus on in future", "opportunities"],
-    "pullCount": 9
+    "pullCount": 10
   },
   "choice": {
     "name": "Choice",
     "positions": ["Option A expectations", "Option A expectations", "Option A expectations", "Option B expectations", "Option B expectations", "Option B expectations", "Likely outcome for A", "Likely outcome for B", "what you need to know before choosing"],
-    "pullCount": 8
+    "pullCount": 9
   },
   "lifeatm": {
     "name": "Life Right Now",
     "positions": ["present self", "resources, money matters", "mental, interal communication", "home and family", "creativity, progeny", "job, occupation, physical health", "love, romance", "changes to come", "knowledge, spirituality", "career, ambitions", "community, allies", "challenges, losses"],
-    "pullCount": 11
+    "pullCount": 12
   }
 }
