@@ -83,12 +83,12 @@ async function makeQueryResult (queryString) {
   for (let i = 0; i<=resCount; i++) {
     console.log(results[i]);
     ittID = results[i]['readingID'];
-    ittNote = results[i]['note'];
+    ittNote = results[i]['notes'];
     ittDate = results[i]['date'];
     ittName = results[i]['name'];
     ittCards = results[i]['cards'];
     console.log(`Reading ID ${ittID}: ${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`)
-    await formattedResult.addField(`Reading ID ${ittID}`, `${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`);
+    formattedResult.addField(`Reading ID ${ittID}`, `${ittNote} reading performed on ${ittDate} for ${ittName}: ${ittCards}`);
   }
   console.log(formattedResult);
 
