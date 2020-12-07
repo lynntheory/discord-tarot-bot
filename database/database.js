@@ -72,7 +72,7 @@ module.exports.searchDB = function(queryString){
 }
 
 async function makeQueryResult (queryString) {
-  const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT});
+  var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT});
   console.log(results);
   let resCount = results.length;
   const formattedResult = new Discord.MessageEmbed();
@@ -80,9 +80,9 @@ async function makeQueryResult (queryString) {
   formattedResult.setDescription(`There are ${resCount} results.`);
   let currResult;
   for (let i = 0; i<=resCount; i++) {
-    //currResult = results[i];
-    //console.log(results[i]);
-    formattedResult.addFields({ name: `Reading ID ${results[i][0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
+    currResult = results[i];
+    console.log(currResult);
+    formattedResult.addFields({ name: `Reading ID ${currResult[0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
   }
   console.log(formattedResult);
   return await formattedResult;
