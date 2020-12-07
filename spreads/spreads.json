@@ -1,7 +1,7 @@
 {
   "one": {
     "name": "Pull One",
-    "positions": "message",
+    "positions": " ",
     "pullCount": 1
   },
   "three": {
