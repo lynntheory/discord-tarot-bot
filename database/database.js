@@ -68,7 +68,7 @@ module.exports.logReading = function(args, spread, hand){
 
 module.exports.searchDB = function(queryString){
     let results = makeQuery(queryString);
-    let resCount = results.length();
+    let resCount = results.length;
     const formattedResult = new Discord.MessageEmbed();
     formattedResult.setTitle('Query Results');
     formattedResult.setDescription(`There are ${resCount} results.`);
