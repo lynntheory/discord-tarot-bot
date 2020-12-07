@@ -1,5 +1,5 @@
 //imports
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Sequelize, Model, DataTypes, QueryTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
 
