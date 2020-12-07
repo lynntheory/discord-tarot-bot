@@ -75,6 +75,7 @@ async function makeQueryResult (queryString) {
   var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT});
   console.log(results);
   let resCount = results.length;
+  console.log(results.length);
   const formattedResult = new Discord.MessageEmbed();
   formattedResult.setTitle('Query Results');
   formattedResult.setDescription(`There are ${resCount} results.`);
@@ -82,7 +83,8 @@ async function makeQueryResult (queryString) {
   for (let i = 0; i<=resCount; i++) {
     currResult = results[i];
     console.log(currResult);
-    formattedResult.addFields({ name: `Reading ID ${currResult[0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
+    await formattedResult.addFields({ name: `Reading ID ${currResult[0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
+    console.log (`itteration ${i}`);
   }
   console.log(formattedResult);
   return await formattedResult;
