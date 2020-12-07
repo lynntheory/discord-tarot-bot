@@ -72,14 +72,14 @@ module.exports.searchDB = function(queryString){
 }
 
 async function makeQueryResult (queryString) {
-  const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT });
+  const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT, raw: true });
   console.log(results);
   let resCount = results.length;
   const formattedResult = new Discord.MessageEmbed();
   formattedResult.setTitle('Query Results');
   formattedResult.setDescription(`There are ${resCount} results.`);
   for (let i = 0; i<=resCount; i++) {
-    let currResult = JSON.parse(JSON.stringify(results[i]));
+    let currResult = results[i];
     formattedResult.addFields({ name: `Reading ID ${currResult.readingID}`, value: `${currResult.notes} reading performed on ${currResult.date} for ${currResult.name}: ${currResult.cards}`});
   }
   console.log(formattedResult);
