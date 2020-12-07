@@ -74,6 +74,7 @@ module.exports.searchDB = function(queryString){
 async function makeQueryResult (queryString) {
   const results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT, nest: true });
   console.log(results);
+  console.log(results[0]);
   let resCount = results.length;
   const formattedResult = new Discord.MessageEmbed();
   formattedResult.setTitle('Query Results');
