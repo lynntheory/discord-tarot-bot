@@ -11,11 +11,11 @@ const currentDeck = require('../carddecks/futhark.json');
 async function castRunes (message, args) {
   try{
     var hand = [];
-    let pullCount = 8;
+    let pullCount = 9;
     let runes = mechanics.itemPull(hand, pullCount, currentDeck);
     coords.runePlace(message, runes, pullCount, currentDeck);
 
-    for (var i = 0; i <= pullCount; i++) {
+    for (var i = 0; i < pullCount; i++) {
       var meaning = book.checkBook(runes[i], currentDeck);
       var symbol = emoji.getEmoji(runes[i], currentDeck);
       var imgPath = image.getImg(runes[i], currentDeck);
