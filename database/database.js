@@ -83,7 +83,7 @@ async function makeQueryResult (queryString) {
   for (let i = 0; i<=resCount; i++) {
     currResult = results[i];
     console.log(currResult);
-    await formattedResult.addFields({ name: `Reading ID ${currResult[0]}`, value: `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`});
+    await formattedResult.addField(`Reading ID ${currResult[0]}`, `${results[i][6]} reading performed on ${results[i][1]} for ${results[i][5]}: ${results[i][4]}`);
     console.log (`itteration ${i}`);
   }
   console.log(formattedResult);
