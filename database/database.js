@@ -1,5 +1,5 @@
 //imports
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Sequelize, Model, DataTypes, QueryTypes } = require('sequelize');
 const sequelize = new Sequelize(process.env.DATABASE_URL);
 const config = require('../config/config.json');
 
@@ -66,8 +66,8 @@ module.exports.logReading = function(args, spread, hand){
 }
 
 module.exports.searchDB = function(message, queryString){
-    const [results, metadata] = sequelize.query(queryString);
+    const results = await sequelize.query(queryString);
     console.log(results);
-    console.log(metadata);
+    //console.log(metadata);
     message.reply(results);
 }
