@@ -67,16 +67,20 @@ module.exports.logReading = function(args, spread, hand){
 
 module.exports.searchDB = function(queryString){
     var formattedResult = makeQueryResult(queryString);
+    console.log('one level up check:');
     console.log(formattedResult);
     return formattedResult;
 }
 
 async function makeQueryResult (queryString) {
   var results = await sequelize.query(queryString, { type: sequelize.QueryTypes.SELECT });
+  console.log('results below');
   console.log(results);
   let resCount = results.length;
+  console.log('results length:');
   console.log(results.length);
   var formattedResult = `Query Results: There are ${resCount} results.`;
+  console.log('initial formatted results');
   console.log(formattedResult);
   let ittID, ittNote, ittDate, ittName, ittCards, ittString;
   for (let i = 0; i<=resCount; i++) {
@@ -90,6 +94,7 @@ async function makeQueryResult (queryString) {
     console.log(ittString);
     formattedResult = formattedResult.concat(ittString);
   }
+  console.log('full formatted result');
   console.log(formattedResult);
   return formattedResult;
 }
