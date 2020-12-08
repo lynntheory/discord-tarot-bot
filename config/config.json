@@ -1,4 +1,5 @@
 {
   "Prefix": "^",
+  "Prefix2": "$",
   "defaultDeck": "riderwaite"
 }
