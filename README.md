@@ -32,7 +32,9 @@ All commands in the ``cmds`` folder require use of the prefix stored in the ``co
 **Spreads:**
 
 one, three, time, threeLove, fiveCard, fiveLove, fiveRelationship, compatibility, crossSpread, guideSpread, sevenDay, sixMonth, twelveMonth, busStrat, choice, lifeatm
+
 Full spread data at ``spreads/spreads.json``
+
 You can also type in a number (1 to 21) and the bot will pull that many cards.
 
 
