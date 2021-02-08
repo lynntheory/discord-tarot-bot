@@ -20,6 +20,7 @@ All commands in the ``cmds`` folder require use of the prefix stored in the ``co
 
 **Commands:**
 ^pull [spread or #] [deck]
+
 ^castRunes(edited)
 
 **Spreads:**
@@ -29,8 +30,11 @@ You can also type in a number (1 to 21) and the bot will pull that many cards.
 
 **Decks:**
 rw - standard rider waite
+
 ast - astrologian deck
+
 futhark - futhark runes (Reversals will pop up but the meanings aren't in place)
+
 ogham - ogham sticks
 
 The definitions are VERY rough and are mostly shorthanded. The idea is that readers would edit the deck files for their own servers.
