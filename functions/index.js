@@ -6,13 +6,15 @@ const pull = require('../cmds/pull.js');
 const castRunes = require('../cmds/castRunes.js');
 const about = require('../cmds/about.js');
 const refresh = require('../cmds/refresh.js');
+const lookup = require('../cmds/lookup.js');
 
 
 const commands = {
   'pull': pull,
   'castRunes': castRunes,
   'about': about,
-  'refresh': refresh
+  'refresh': refresh,
+  'lookup': lookup
 };
 
 module.exports.check = function(message) {

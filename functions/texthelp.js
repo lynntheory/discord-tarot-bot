@@ -8,8 +8,10 @@ module.exports.texthelp = function(args){
     //for each in corrections
       //if word = word, set to []1
       //return
+    let x = 0;
     for (var i = 0, i <= list.length, i++) {
-      
+      x = 0;
+
     }
 
 
