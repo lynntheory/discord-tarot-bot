@@ -29,7 +29,7 @@ async function lookup (message, args) {
     }
     let parse = args.splice(0, 2);
     let i = 0;
-    for (i, i <= list.length, i++) {
+    for (i; i <= list.length; i++) {
       parse = utility.texthelp();
       if (parse = null) return parse;
     }
