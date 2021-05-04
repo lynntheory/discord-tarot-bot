@@ -27,18 +27,19 @@ async function lookup (message, args) {
     } else {
       message.reply (`The deck you entered could not be matched to one on record. Please check your entry and try again.`);
     }
-    let parse = args.splice(0, 2);
+    args.splice(0, 2);
     let i = 0;
     let length = list.length;
     for (i; i < length; i++) {
-      parse = utility.texthelp();
+      parse = utility.texthelp(args[i]);
       if (parse = null) return parse;
+      args[i] = parse;
     }
     if (parse = null) {
       message.reply (`The phrase you entered could not be matched to an item. Please check your entry and try again.`);
     } else {
-      let item = parse.join(" ");
-      var meaning = book.checkBook(item, currentDeck);
+      let target = args.join(" ");
+      var meaning = book.checkBook(target, currentDeck);
       var imgPath = image.getImg(item, currentDeck);
       message.channel.send({embed: {
         title: `The ${itemLabel} is ${hand[i]}.`,
