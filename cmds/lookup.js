@@ -28,7 +28,7 @@ async function lookup (message, args) {
     }
     args.splice(0, 2);
     let i = 0;
-    let length = list.length;
+    let length = args.length;
     for (i; i < length; i++) {
       parse = utility.texthelp(args[i]);
       if (parse = null) return parse;
