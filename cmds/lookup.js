@@ -12,8 +12,7 @@ const utility = require('../functions/texthelp.js');
 const riderwaite = require('../texthelp/riderwaite.json');
 
 const textFiles = {
-  'Rider Waite': riderwaite,
-  'futhark': futhark
+  'Rider Waite': riderwaite
 }
 
 //input: ^lookup deck card
