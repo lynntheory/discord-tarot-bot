@@ -6,6 +6,7 @@ const image = require('../functions/getImg.js');
 const mechanics = require('../functions/itemPull.js');
 const spreadInfo = require('../functions/getSpread.js');
 const deck = require('../functions/deckCheck.js');
+const duo = require('../functions/duoCheck.js');
 
 async function pull (message, args) {
   try{
@@ -28,6 +29,16 @@ async function pull (message, args) {
       message.channel.send({embed: {
         title: `The ${positionName} ${itemLabel} is ${hand[i]}.`,
         description: `Meaning: ${meaning}`,
+        image: {
+          "url": `${imgPath}`
+        }
+      }})
+    }
+    if (spread = "lenDuo") {
+      var meaning = duo.duoCheck(hand);
+      message.channel.send({embed: {
+        title: `The paired meaning for this combo is:}.`,
+        description: `${meaning}`,
         image: {
           "url": `${imgPath}`
         }

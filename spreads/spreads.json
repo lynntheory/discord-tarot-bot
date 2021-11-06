@@ -4,6 +4,11 @@
     "positions": "pulled",
     "pullCount": 1
   },
+  "lenDuo": {
+    "name": "Lenormand Duo",
+    "positions": "subject, modifier",
+    "pullCount": 2
+  },
   "three": {
     "name": "Action Plan",
     "positions": ["problem or issue", "course of action", "outcome"],
